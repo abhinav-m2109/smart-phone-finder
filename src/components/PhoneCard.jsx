@@ -42,7 +42,16 @@ export default function PhoneCard({
           </div>
         </div>
 
-        <img src={phone.image} alt={phone.name} className="phone-img" loading="lazy" />
+        <img 
+          src={phone.image} 
+          alt={phone.name} 
+          className="phone-img" 
+          loading="lazy" 
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=800";
+          }}
+        />
       </div>
 
       {/* Card Content */}
