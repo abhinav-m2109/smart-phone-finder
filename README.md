@@ -68,5 +68,5 @@ The ML server will be active at `http://localhost:8000`.
 ---
 
 ## You can view the live deployment of this project here:
-[https://smart-phone-scouter-3djvstegk-the-peak1.vercel.app/]
+[https://smart-phone-scouter-mlj9cmusr-the-peak1.vercel.app/]
 
