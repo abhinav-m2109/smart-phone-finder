@@ -28,7 +28,7 @@ PhonePulse is a modern, high-performance web application combining a **Python Fa
 - ⏱️ **Speedometer Budget RPM Gauge**: Custom interactive SVG gauge for setting budget limits with visual speed/RPM feedback.
 - 🔊 **Web Audio Synthesizer**: Native browser Web Audio feedback FX for button clicks, gear shifts, price hike alarms, and deal victory sounds.
 - 🛒 **Cheapest Store Deal Link Finder**: Compares live price links across **Amazon, Best Buy, Walmart, Official Store, B&H Photo, and eBay**, highlighting the cheapest retailer.
-- ⚔️ **Side-by-Side Spec & Price Comparison**: Compare up to 3 smartphones side-by-side.
+- ⚔️ **Side-by-Side specification & Price Comparison**: Compare up to 3 smartphones side-by-side.
 
 ---
 
