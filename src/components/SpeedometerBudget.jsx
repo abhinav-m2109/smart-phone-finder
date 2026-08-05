@@ -1,75 +1,67 @@
 import React from 'react';
-import { SlidersHorizontal, DollarSign } from 'lucide-react';
+import { Sliders, Sparkles, AlertCircle } from 'lucide-react';
 import { soundFX } from '../utils/audioEffects';
+import { formatINR } from '../utils/formatters';
+
+const PRESETS = [
+  { label: "₹15K", val: 15000 },
+  { label: "₹30K", val: 30000 },
+  { label: "₹50K", val: 50000 },
+  { label: "₹80K", val: 80000 },
+  { label: "₹1.2L", val: 120000 },
+  { label: "Max", val: 180000 }
+];
 
 export default function SpeedometerBudget({ maxBudget, setMaxBudget }) {
-  const PRESETS = [250, 400, 650, 950, 1500];
-
-  const handleSliderChange = (e) => {
-    const val = Number(e.target.value);
-    setMaxBudget(val);
-    if (val % 250 === 0) {
-      soundFX.playClick();
-    }
+  const handleChange = (e) => {
+    soundFX.playSliderTick();
+    setMaxBudget(Number(e.target.value));
   };
 
   return (
-    <div style={{
-      background: 'var(--bg-card)',
-      border: '1px solid var(--border-subtle)',
-      borderRadius: '16px',
-      padding: '1.25rem 1.5rem',
-      position: 'relative'
-    }}>
+    <div className="glass-panel budget-widget">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.85rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-dim)' }}>
-          <SlidersHorizontal size={14} style={{ color: 'var(--accent-primary)' }} />
-          Target Budget Limit
+        <div className="widget-label">
+          <Sliders size={16} style={{ color: 'var(--accent-primary)' }} />
+          <span>Max Budget Limit</span>
         </div>
 
-        <div style={{
-          fontFamily: 'var(--font-heading)',
-          fontSize: '1.35rem',
-          fontWeight: 800,
-          color: 'var(--accent-primary)'
-        }}>
-          ${maxBudget === 1600 ? '1600+' : maxBudget}
+        <div className="budget-value">
+          {maxBudget >= 180000 ? 'No Limit' : formatINR(maxBudget)}
         </div>
       </div>
 
       <input
         type="range"
-        min="150"
-        max="1600"
-        step="25"
+        min="10000"
+        max="180000"
+        step="5000"
         value={maxBudget}
-        onChange={handleSliderChange}
-        className="range-slider"
-        style={{ marginBottom: '0.85rem' }}
+        onChange={handleChange}
+        className="budget-slider"
       />
 
-      <div className="budget-presets">
-        {PRESETS.map((val) => (
+      <div className="budget-ticks">
+        <span>₹10,000</span>
+        <span>₹50,000</span>
+        <span>₹1,000,00</span>
+        <span>₹1,80,000+</span>
+      </div>
+
+      {/* Preset Chips */}
+      <div className="preset-chips" style={{ marginTop: '1rem' }}>
+        {PRESETS.map((item) => (
           <button
-            key={val}
-            className={`preset-chip ${maxBudget === val ? 'active' : ''}`}
+            key={item.val}
+            className={`preset-chip ${maxBudget === item.val ? 'active' : ''}`}
             onClick={() => {
-              setMaxBudget(val);
               soundFX.playClick();
+              setMaxBudget(item.val);
             }}
           >
-            ${val}
+            {item.label}
           </button>
         ))}
-        <button
-          className={`preset-chip ${maxBudget === 1600 ? 'active' : ''}`}
-          onClick={() => {
-            setMaxBudget(1600);
-            soundFX.playClick();
-          }}
-        >
-          Any Price
-        </button>
       </div>
     </div>
   );

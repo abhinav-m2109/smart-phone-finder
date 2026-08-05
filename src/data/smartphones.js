@@ -4,10 +4,10 @@ export const SMARTPHONES = [
     id: "iphone-16-pro-max",
     name: "Apple iPhone 16 Pro Max",
     brand: "Apple",
-    launchPrice: 1199,
-    currentPrice: 1199,
-    lowestPrice: 1149,
-    highestPrice: 1249,
+    launchPrice: 144900,
+    currentPrice: 144900,
+    lowestPrice: 139900,
+    highestPrice: 149900,
     priceStatus: "stable",
     priceChangeAmount: 0,
     priceChangePercent: "0.0%",
@@ -24,34 +24,36 @@ export const SMARTPHONES = [
       ramStorage: "8GB RAM / 256GB Storage",
       display: "6.9\" Super Retina XDR OLED, 120Hz ProMotion, 2000 nits",
       camera: "48MP Fusion OIS + 48MP Ultra-wide + 12MP 5x Tetraprism",
-      battery: "4685 mAh, 45W Wired, 25W MagSafe",
+      battery: "4685 mAh, 45W Fast Charge, 25W MagSafe",
       osUpdates: "6+ Years iOS Support",
       weight: "227g",
       antutuScore: "1,710,000"
     },
     stores: [
-      { name: "Apple Store", price: 1199, isLowest: true, inStock: true, link: "https://www.apple.com/iphone-16-pro/", freeShipping: true },
-      { name: "Amazon", price: 1199, isLowest: true, inStock: true, link: "https://www.amazon.com/dp/B0DGJ9B5X7", freeShipping: true },
-      { name: "Best Buy", price: 1199, isLowest: true, inStock: true, link: "https://www.bestbuy.com", freeShipping: true },
-      { name: "Walmart", price: 1199, isLowest: true, inStock: true, link: "https://www.walmart.com", freeShipping: true }
+      { name: "Amazon India", price: 139900, isLowest: true, inStock: true, link: "https://www.amazon.in/dp/B0DGJ9B5X7", freeShipping: true },
+      { name: "Flipkart", price: 144900, isLowest: false, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Croma", price: 144900, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Reliance Digital", price: 144900, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true },
+      { name: "Pai International", price: 142900, isLowest: false, inStock: true, link: "https://www.paiinternational.in", freeShipping: true },
+      { name: "Apple Store India", price: 144900, isLowest: false, inStock: true, link: "https://www.apple.com/in/iphone-16-pro/", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 1199 },
-      { month: "Apr", price: 1199 },
-      { month: "May", price: 1249 },
-      { month: "Jun", price: 1199 },
-      { month: "Jul", price: 1199 },
-      { month: "Aug", price: 1199 }
+      { month: "Mar", price: 144900 },
+      { month: "Apr", price: 144900 },
+      { month: "May", price: 149900 },
+      { month: "Jun", price: 144900 },
+      { month: "Jul", price: 144900 },
+      { month: "Aug", price: 139900 }
     ]
   },
   {
     id: "iphone-16-pro",
     name: "Apple iPhone 16 Pro",
     brand: "Apple",
-    launchPrice: 999,
-    currentPrice: 999,
-    lowestPrice: 949,
-    highestPrice: 1049,
+    launchPrice: 119900,
+    currentPrice: 119900,
+    lowestPrice: 114900,
+    highestPrice: 124900,
     priceStatus: "stable",
     priceChangeAmount: 0,
     priceChangePercent: "0.0%",
@@ -74,27 +76,29 @@ export const SMARTPHONES = [
       antutuScore: "1,690,000"
     },
     stores: [
-      { name: "Amazon", price: 999, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Best Buy", price: 999, isLowest: true, inStock: true, link: "https://www.bestbuy.com", freeShipping: true },
-      { name: "Apple Direct", price: 999, isLowest: true, inStock: true, link: "https://www.apple.com", freeShipping: true }
+      { name: "Flipkart", price: 114900, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Amazon India", price: 119900, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Croma", price: 119900, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Reliance Digital", price: 119900, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true },
+      { name: "Vijay Sales", price: 118900, isLowest: false, inStock: true, link: "https://www.vijaysales.com", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 999 },
-      { month: "Apr", price: 999 },
-      { month: "May", price: 1029 },
-      { month: "Jun", price: 999 },
-      { month: "Jul", price: 999 },
-      { month: "Aug", price: 999 }
+      { month: "Mar", price: 119900 },
+      { month: "Apr", price: 119900 },
+      { month: "May", price: 122900 },
+      { month: "Jun", price: 119900 },
+      { month: "Jul", price: 119900 },
+      { month: "Aug", price: 114900 }
     ]
   },
   {
     id: "iphone-16",
     name: "Apple iPhone 16",
     brand: "Apple",
-    launchPrice: 799,
-    currentPrice: 799,
-    lowestPrice: 749,
-    highestPrice: 799,
+    launchPrice: 79900,
+    currentPrice: 79900,
+    lowestPrice: 74900,
+    highestPrice: 79900,
     priceStatus: "stable",
     priceChangeAmount: 0,
     priceChangePercent: "0.0%",
@@ -117,32 +121,33 @@ export const SMARTPHONES = [
       antutuScore: "1,520,000"
     },
     stores: [
-      { name: "Amazon", price: 799, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Walmart", price: 799, isLowest: true, inStock: true, link: "https://www.walmart.com", freeShipping: true },
-      { name: "Best Buy", price: 799, isLowest: true, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "Amazon India", price: 74900, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Flipkart", price: 79900, isLowest: false, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Croma", price: 79900, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Vijay Sales", price: 78900, isLowest: false, inStock: true, link: "https://www.vijaysales.com", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 799 },
-      { month: "Apr", price: 799 },
-      { month: "May", price: 799 },
-      { month: "Jun", price: 799 },
-      { month: "Jul", price: 799 },
-      { month: "Aug", price: 799 }
+      { month: "Mar", price: 79900 },
+      { month: "Apr", price: 79900 },
+      { month: "May", price: 79900 },
+      { month: "Jun", price: 79900 },
+      { month: "Jul", price: 79900 },
+      { month: "Aug", price: 74900 }
     ]
   },
   {
     id: "iphone-15-pro-max",
     name: "Apple iPhone 15 Pro Max",
     brand: "Apple",
-    launchPrice: 1199,
-    currentPrice: 1049,
-    lowestPrice: 999,
-    highestPrice: 1249,
+    launchPrice: 159900,
+    currentPrice: 134900,
+    lowestPrice: 129900,
+    highestPrice: 159900,
     priceStatus: "drop",
-    priceChangeAmount: -150,
-    priceChangePercent: "-12.5%",
+    priceChangeAmount: -25000,
+    priceChangePercent: "-15.6%",
     hikeNotice: null,
-    dropNotice: "Save $150 off launch MSRP!",
+    dropNotice: "Save ₹25,000 off launch MSRP!",
     image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch-naturaltitanium?wid=1200&hei=630&fmt=jpeg&qlt=95",
     rating: 4.8,
     reviewsCount: 5420,
@@ -160,32 +165,33 @@ export const SMARTPHONES = [
       antutuScore: "1,550,000"
     },
     stores: [
-      { name: "Amazon", price: 999, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Best Buy", price: 1049, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true },
-      { name: "Walmart", price: 1029, isLowest: false, inStock: true, link: "https://www.walmart.com", freeShipping: true }
+      { name: "Amazon India", price: 129900, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Flipkart", price: 134900, isLowest: false, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Reliance Digital", price: 134900, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true },
+      { name: "Pai International", price: 132900, isLowest: false, inStock: true, link: "https://www.paiinternational.in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 1199 },
-      { month: "Apr", price: 1149 },
-      { month: "May", price: 1129 },
-      { month: "Jun", price: 1099 },
-      { month: "Jul", price: 1049 },
-      { month: "Aug", price: 999 }
+      { month: "Mar", price: 159900 },
+      { month: "Apr", price: 149900 },
+      { month: "May", price: 144900 },
+      { month: "Jun", price: 139900 },
+      { month: "Jul", price: 134900 },
+      { month: "Aug", price: 129900 }
     ]
   },
   {
     id: "iphone-15",
     name: "Apple iPhone 15",
     brand: "Apple",
-    launchPrice: 799,
-    currentPrice: 669,
-    lowestPrice: 649,
-    highestPrice: 799,
+    launchPrice: 79900,
+    currentPrice: 64900,
+    lowestPrice: 59900,
+    highestPrice: 79900,
     priceStatus: "drop",
-    priceChangeAmount: -130,
-    priceChangePercent: "-16.3%",
+    priceChangeAmount: -15000,
+    priceChangePercent: "-18.8%",
     hikeNotice: null,
-    dropNotice: "Dynamic Island under $670!",
+    dropNotice: "Dynamic Island now under ₹60,000!",
     image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-blue?wid=1200&hei=630&fmt=jpeg&qlt=95",
     rating: 4.7,
     reviewsCount: 6100,
@@ -203,17 +209,18 @@ export const SMARTPHONES = [
       antutuScore: "1,380,000"
     },
     stores: [
-      { name: "Walmart", price: 649, isLowest: true, inStock: true, link: "https://www.walmart.com", freeShipping: true },
-      { name: "Amazon", price: 669, isLowest: false, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Best Buy", price: 679, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "Flipkart", price: 59900, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Amazon India", price: 64900, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Croma", price: 64900, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Vijay Sales", price: 63900, isLowest: false, inStock: true, link: "https://www.vijaysales.com", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 799 },
-      { month: "Apr", price: 749 },
-      { month: "May", price: 719 },
-      { month: "Jun", price: 689 },
-      { month: "Jul", price: 669 },
-      { month: "Aug", price: 649 }
+      { month: "Mar", price: 79900 },
+      { month: "Apr", price: 72900 },
+      { month: "May", price: 68900 },
+      { month: "Jun", price: 65900 },
+      { month: "Jul", price: 64900 },
+      { month: "Aug", price: 59900 }
     ]
   },
 
@@ -222,14 +229,14 @@ export const SMARTPHONES = [
     id: "samsung-s25-ultra",
     name: "Samsung Galaxy S25 Ultra",
     brand: "Samsung",
-    launchPrice: 1299,
-    currentPrice: 1349,
-    lowestPrice: 1299,
-    highestPrice: 1399,
+    launchPrice: 129999,
+    currentPrice: 134999,
+    lowestPrice: 129999,
+    highestPrice: 139999,
     priceStatus: "hike",
-    priceChangeAmount: +50,
+    priceChangeAmount: +5000,
     priceChangePercent: "+3.8%",
-    hikeNotice: "⚠️ High demand price increase (+ $50)",
+    hikeNotice: "⚠️ High demand price increase (+ ₹5,000)",
     dropNotice: null,
     image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=800",
     rating: 4.9,
@@ -248,32 +255,34 @@ export const SMARTPHONES = [
       antutuScore: "2,750,000"
     },
     stores: [
-      { name: "Samsung Direct", price: 1299, isLowest: true, inStock: true, link: "https://www.samsung.com", freeShipping: true },
-      { name: "Amazon", price: 1349, isLowest: false, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Best Buy", price: 1349, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "Samsung India", price: 129999, isLowest: true, inStock: true, link: "https://www.samsung.com/in/", freeShipping: true },
+      { name: "Amazon India", price: 134999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Flipkart", price: 134999, isLowest: false, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Croma", price: 134999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Reliance Digital", price: 134999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 1299 },
-      { month: "Apr", price: 1299 },
-      { month: "May", price: 1349 },
-      { month: "Jun", price: 1349 },
-      { month: "Jul", price: 1349 },
-      { month: "Aug", price: 1349 }
+      { month: "Mar", price: 129999 },
+      { month: "Apr", price: 129999 },
+      { month: "May", price: 134999 },
+      { month: "Jun", price: 134999 },
+      { month: "Jul", price: 134999 },
+      { month: "Aug", price: 134999 }
     ]
   },
   {
     id: "samsung-s24-ultra",
     name: "Samsung Galaxy S24 Ultra",
     brand: "Samsung",
-    launchPrice: 1299,
-    currentPrice: 1049,
-    lowestPrice: 999,
-    highestPrice: 1349,
+    launchPrice: 129999,
+    currentPrice: 109999,
+    lowestPrice: 99999,
+    highestPrice: 129999,
     priceStatus: "drop",
-    priceChangeAmount: -250,
-    priceChangePercent: "-19.2%",
+    priceChangeAmount: -20000,
+    priceChangePercent: "-15.4%",
     hikeNotice: null,
-    dropNotice: "$250 Instant Discount!",
+    dropNotice: "₹20,000 Instant Discount in India!",
     image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=800",
     rating: 4.8,
     reviewsCount: 8400,
@@ -291,32 +300,33 @@ export const SMARTPHONES = [
       antutuScore: "1,810,000"
     },
     stores: [
-      { name: "Amazon", price: 999, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Samsung Store", price: 1049, isLowest: false, inStock: true, link: "https://www.samsung.com", freeShipping: true },
-      { name: "Best Buy", price: 1049, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "Amazon India", price: 99999, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Flipkart", price: 109999, isLowest: false, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Croma", price: 109999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Pai International", price: 105999, isLowest: false, inStock: true, link: "https://www.paiinternational.in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 1299 },
-      { month: "Apr", price: 1199 },
-      { month: "May", price: 1149 },
-      { month: "Jun", price: 1099 },
-      { month: "Jul", price: 1049 },
-      { month: "Aug", price: 999 }
+      { month: "Mar", price: 129999 },
+      { month: "Apr", price: 119999 },
+      { month: "May", price: 114999 },
+      { month: "Jun", price: 109999 },
+      { month: "Jul", price: 104999 },
+      { month: "Aug", price: 99999 }
     ]
   },
   {
     id: "samsung-z-fold6",
     name: "Samsung Galaxy Z Fold6",
     brand: "Samsung",
-    launchPrice: 1899,
-    currentPrice: 1549,
-    lowestPrice: 1499,
-    highestPrice: 1899,
+    launchPrice: 164999,
+    currentPrice: 149999,
+    lowestPrice: 139999,
+    highestPrice: 164999,
     priceStatus: "drop",
-    priceChangeAmount: -350,
-    priceChangePercent: "-18.4%",
+    priceChangeAmount: -15000,
+    priceChangePercent: "-9.1%",
     hikeNotice: null,
-    dropNotice: "Huge $350 Foldable Savings!",
+    dropNotice: "₹15,000 Foldable Discount!",
     image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=800",
     rating: 4.7,
     reviewsCount: 1420,
@@ -334,32 +344,33 @@ export const SMARTPHONES = [
       antutuScore: "1,790,000"
     },
     stores: [
-      { name: "Amazon", price: 1499, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Samsung Store", price: 1549, isLowest: false, inStock: true, link: "https://www.samsung.com", freeShipping: true },
-      { name: "Best Buy", price: 1549, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "Amazon India", price: 139999, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Samsung India", price: 149999, isLowest: false, inStock: true, link: "https://www.samsung.com/in/", freeShipping: true },
+      { name: "Flipkart", price: 149999, isLowest: false, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Reliance Digital", price: 149999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 1899 },
-      { month: "Apr", price: 1799 },
-      { month: "May", price: 1699 },
-      { month: "Jun", price: 1629 },
-      { month: "Jul", price: 1549 },
-      { month: "Aug", price: 1499 }
+      { month: "Mar", price: 164999 },
+      { month: "Apr", price: 159999 },
+      { month: "May", price: 154999 },
+      { month: "Jun", price: 149999 },
+      { month: "Jul", price: 144999 },
+      { month: "Aug", price: 139999 }
     ]
   },
   {
     id: "samsung-a55-5g",
     name: "Samsung Galaxy A55 5G",
     brand: "Samsung",
-    launchPrice: 449,
-    currentPrice: 379,
-    lowestPrice: 349,
-    highestPrice: 449,
+    launchPrice: 39999,
+    currentPrice: 34999,
+    lowestPrice: 32999,
+    highestPrice: 39999,
     priceStatus: "drop",
-    priceChangeAmount: -70,
-    priceChangePercent: "-15.6%",
+    priceChangeAmount: -5000,
+    priceChangePercent: "-12.5%",
     hikeNotice: null,
-    dropNotice: "Metal frame & IP67 water resistant under $380",
+    dropNotice: "Metal frame & IP67 water resistant under ₹33,000",
     image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=800",
     rating: 4.6,
     reviewsCount: 3200,
@@ -377,17 +388,18 @@ export const SMARTPHONES = [
       antutuScore: "735,000"
     },
     stores: [
-      { name: "Amazon", price: 349, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Samsung Store", price: 379, isLowest: false, inStock: true, link: "https://www.samsung.com", freeShipping: true },
-      { name: "Walmart", price: 369, isLowest: false, inStock: true, link: "https://www.walmart.com", freeShipping: true }
+      { name: "Flipkart", price: 32999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Amazon India", price: 34999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Croma", price: 34999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Vijay Sales", price: 33999, isLowest: false, inStock: true, link: "https://www.vijaysales.com", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 449 },
-      { month: "Apr", price: 429 },
-      { month: "May", price: 399 },
-      { month: "Jun", price: 389 },
-      { month: "Jul", price: 379 },
-      { month: "Aug", price: 349 }
+      { month: "Mar", price: 39999 },
+      { month: "Apr", price: 37999 },
+      { month: "May", price: 35999 },
+      { month: "Jun", price: 34999 },
+      { month: "Jul", price: 33999 },
+      { month: "Aug", price: 32999 }
     ]
   },
 
@@ -396,15 +408,15 @@ export const SMARTPHONES = [
     id: "google-pixel-9-pro-xl",
     name: "Google Pixel 9 Pro XL",
     brand: "Google",
-    launchPrice: 1099,
-    currentPrice: 999,
-    lowestPrice: 949,
-    highestPrice: 1099,
+    launchPrice: 124999,
+    currentPrice: 114999,
+    lowestPrice: 109999,
+    highestPrice: 124999,
     priceStatus: "drop",
-    priceChangeAmount: -100,
-    priceChangePercent: "-9.1%",
+    priceChangeAmount: -10000,
+    priceChangePercent: "-8.0%",
     hikeNotice: null,
-    dropNotice: "$100 Off Google's Flagship AI Phone",
+    dropNotice: "₹10,000 Off Google Flagship AI Phone",
     image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=800",
     rating: 4.8,
     reviewsCount: 1980,
@@ -422,32 +434,32 @@ export const SMARTPHONES = [
       antutuScore: "1,310,000"
     },
     stores: [
-      { name: "Amazon", price: 949, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Google Store", price: 999, isLowest: false, inStock: true, link: "https://store.google.com", freeShipping: true },
-      { name: "Best Buy", price: 999, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "Flipkart", price: 109999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Croma", price: 114999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Reliance Digital", price: 114999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 1099 },
-      { month: "Apr", price: 1099 },
-      { month: "May", price: 1049 },
-      { month: "Jun", price: 999 },
-      { month: "Jul", price: 999 },
-      { month: "Aug", price: 949 }
+      { month: "Mar", price: 124999 },
+      { month: "Apr", price: 124999 },
+      { month: "May", price: 119999 },
+      { month: "Jun", price: 114999 },
+      { month: "Jul", price: 114999 },
+      { month: "Aug", price: 109999 }
     ]
   },
   {
     id: "google-pixel-8a",
     name: "Google Pixel 8a",
     brand: "Google",
-    launchPrice: 499,
-    currentPrice: 399,
-    lowestPrice: 379,
-    highestPrice: 499,
+    launchPrice: 52999,
+    currentPrice: 39999,
+    lowestPrice: 36999,
+    highestPrice: 52999,
     priceStatus: "lowest",
-    priceChangeAmount: -120,
-    priceChangePercent: "-24.0%",
+    priceChangeAmount: -13000,
+    priceChangePercent: "-24.5%",
     hikeNotice: null,
-    dropNotice: "Record Low Price! #1 Budget Camera",
+    dropNotice: "Record Low Price! #1 Budget Camera in India",
     image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=800",
     rating: 4.7,
     reviewsCount: 3840,
@@ -465,17 +477,17 @@ export const SMARTPHONES = [
       antutuScore: "1,120,000"
     },
     stores: [
-      { name: "Amazon", price: 379, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Best Buy", price: 399, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true },
-      { name: "Google Store", price: 399, isLowest: false, inStock: true, link: "https://store.google.com", freeShipping: true }
+      { name: "Flipkart", price: 36999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Croma", price: 39999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Reliance Digital", price: 39999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 499 },
-      { month: "Apr", price: 479 },
-      { month: "May", price: 449 },
-      { month: "Jun", price: 419 },
-      { month: "Jul", price: 399 },
-      { month: "Aug", price: 379 }
+      { month: "Mar", price: 52999 },
+      { month: "Apr", price: 47999 },
+      { month: "May", price: 44999 },
+      { month: "Jun", price: 41999 },
+      { month: "Jul", price: 39999 },
+      { month: "Aug", price: 36999 }
     ]
   },
 
@@ -484,14 +496,14 @@ export const SMARTPHONES = [
     id: "oneplus-13-5g",
     name: "OnePlus 13 5G",
     brand: "OnePlus",
-    launchPrice: 899,
-    currentPrice: 949,
-    lowestPrice: 899,
-    highestPrice: 949,
+    launchPrice: 69999,
+    currentPrice: 72999,
+    lowestPrice: 69999,
+    highestPrice: 74999,
     priceStatus: "hike",
-    priceChangeAmount: +50,
-    priceChangePercent: "+5.6%",
-    hikeNotice: "⚠️ High gamer demand price increase (+ $50)",
+    priceChangeAmount: +3000,
+    priceChangePercent: "+4.3%",
+    hikeNotice: "⚠️ High demand price increase (+ ₹3,000)",
     dropNotice: null,
     image: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&q=80&w=800",
     rating: 4.9,
@@ -510,32 +522,33 @@ export const SMARTPHONES = [
       antutuScore: "2,920,000"
     },
     stores: [
-      { name: "OnePlus Direct", price: 899, isLowest: true, inStock: true, link: "https://www.oneplus.com", freeShipping: true },
-      { name: "Amazon", price: 949, isLowest: false, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Best Buy", price: 949, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "OnePlus Store India", price: 69999, isLowest: true, inStock: true, link: "https://www.oneplus.in", freeShipping: true },
+      { name: "Amazon India", price: 72999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Reliance Digital", price: 72999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true },
+      { name: "Croma", price: 72999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 899 },
-      { month: "Apr", price: 899 },
-      { month: "May", price: 919 },
-      { month: "Jun", price: 949 },
-      { month: "Jul", price: 949 },
-      { month: "Aug", price: 949 }
+      { month: "Mar", price: 69999 },
+      { month: "Apr", price: 69999 },
+      { month: "May", price: 71999 },
+      { month: "Jun", price: 72999 },
+      { month: "Jul", price: 72999 },
+      { month: "Aug", price: 72999 }
     ]
   },
   {
     id: "oneplus-12-5g",
     name: "OnePlus 12 5G",
     brand: "OnePlus",
-    launchPrice: 799,
-    currentPrice: 699,
-    lowestPrice: 649,
-    highestPrice: 799,
+    launchPrice: 64999,
+    currentPrice: 54999,
+    lowestPrice: 51999,
+    highestPrice: 64999,
     priceStatus: "drop",
-    priceChangeAmount: -100,
-    priceChangePercent: "-12.5%",
+    priceChangeAmount: -10000,
+    priceChangePercent: "-15.4%",
     hikeNotice: null,
-    dropNotice: "$100 Discount on Snapdragon 8 Gen 3 Flagship",
+    dropNotice: "₹10,000 Discount on Snapdragon 8 Gen 3 Flagship",
     image: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&q=80&w=800",
     rating: 4.8,
     reviewsCount: 4200,
@@ -553,17 +566,17 @@ export const SMARTPHONES = [
       antutuScore: "1,790,000"
     },
     stores: [
-      { name: "Amazon", price: 649, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "OnePlus Store", price: 699, isLowest: false, inStock: true, link: "https://www.oneplus.com", freeShipping: true },
-      { name: "Best Buy", price: 699, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "Amazon India", price: 51999, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "OnePlus Store India", price: 54999, isLowest: false, inStock: true, link: "https://www.oneplus.in", freeShipping: true },
+      { name: "Croma", price: 54999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 799 },
-      { month: "Apr", price: 749 },
-      { month: "May", price: 719 },
-      { month: "Jun", price: 699 },
-      { month: "Jul", price: 679 },
-      { month: "Aug", price: 649 }
+      { month: "Mar", price: 64999 },
+      { month: "Apr", price: 59999 },
+      { month: "May", price: 56999 },
+      { month: "Jun", price: 54999 },
+      { month: "Jul", price: 52999 },
+      { month: "Aug", price: 51999 }
     ]
   },
 
@@ -572,15 +585,15 @@ export const SMARTPHONES = [
     id: "nothing-phone-2a-plus",
     name: "Nothing Phone (2a) Plus",
     brand: "Nothing",
-    launchPrice: 399,
-    currentPrice: 349,
-    lowestPrice: 329,
-    highestPrice: 399,
+    launchPrice: 27999,
+    currentPrice: 24999,
+    lowestPrice: 22999,
+    highestPrice: 27999,
     priceStatus: "drop",
-    priceChangeAmount: -50,
-    priceChangePercent: "-12.5%",
+    priceChangeAmount: -3000,
+    priceChangePercent: "-10.7%",
     hikeNotice: null,
-    dropNotice: "Glyph Design + 50MP Selfie Camera under $350",
+    dropNotice: "Glyph Design + 50MP Selfie Camera under ₹23,000",
     image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=800",
     rating: 4.7,
     reviewsCount: 1650,
@@ -598,31 +611,32 @@ export const SMARTPHONES = [
       antutuScore: "805,000"
     },
     stores: [
-      { name: "Amazon", price: 329, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Nothing Store", price: 349, isLowest: false, inStock: true, link: "https://nothing.tech", freeShipping: true }
+      { name: "Flipkart", price: 22999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Croma", price: 24999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Reliance Digital", price: 24999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 399 },
-      { month: "Apr", price: 389 },
-      { month: "May", price: 369 },
-      { month: "Jun", price: 359 },
-      { month: "Jul", price: 349 },
-      { month: "Aug", price: 329 }
+      { month: "Mar", price: 27999 },
+      { month: "Apr", price: 26999 },
+      { month: "May", price: 25999 },
+      { month: "Jun", price: 24999 },
+      { month: "Jul", price: 23999 },
+      { month: "Aug", price: 22999 }
     ]
   },
   {
     id: "cmf-phone-1",
     name: "CMF Phone 1 by Nothing",
     brand: "Nothing",
-    launchPrice: 239,
-    currentPrice: 199,
-    lowestPrice: 189,
-    highestPrice: 239,
+    launchPrice: 15999,
+    currentPrice: 13999,
+    lowestPrice: 12999,
+    highestPrice: 15999,
     priceStatus: "lowest",
-    priceChangeAmount: -40,
-    priceChangePercent: "-16.7%",
+    priceChangeAmount: -2000,
+    priceChangePercent: "-12.5%",
     hikeNotice: null,
-    dropNotice: "#1 Budget Smartphone Deal Under $200",
+    dropNotice: "#1 Budget Smartphone Deal Under ₹13,000 in India",
     image: "https://images.unsplash.com/photo-1546054454-aa26e2b734c7?auto=format&fit=crop&q=80&w=800",
     rating: 4.8,
     reviewsCount: 2900,
@@ -640,16 +654,17 @@ export const SMARTPHONES = [
       antutuScore: "670,000"
     },
     stores: [
-      { name: "Amazon", price: 189, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Nothing Direct", price: 199, isLowest: false, inStock: true, link: "https://cmf.tech", freeShipping: true }
+      { name: "Flipkart", price: 12999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Croma", price: 13999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true },
+      { name: "Reliance Digital", price: 13999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 239 },
-      { month: "Apr", price: 229 },
-      { month: "May", price: 219 },
-      { month: "Jun", price: 209 },
-      { month: "Jul", price: 199 },
-      { month: "Aug", price: 189 }
+      { month: "Mar", price: 15999 },
+      { month: "Apr", price: 14999 },
+      { month: "May", price: 14499 },
+      { month: "Jun", price: 13999 },
+      { month: "Jul", price: 13499 },
+      { month: "Aug", price: 12999 }
     ]
   },
 
@@ -658,15 +673,15 @@ export const SMARTPHONES = [
     id: "xiaomi-14-ultra",
     name: "Xiaomi 14 Ultra",
     brand: "Xiaomi",
-    launchPrice: 1499,
-    currentPrice: 1199,
-    lowestPrice: 1149,
-    highestPrice: 1499,
+    launchPrice: 99999,
+    currentPrice: 89999,
+    lowestPrice: 84999,
+    highestPrice: 99999,
     priceStatus: "drop",
-    priceChangeAmount: -300,
-    priceChangePercent: "-20.0%",
+    priceChangeAmount: -10000,
+    priceChangePercent: "-10.0%",
     hikeNotice: null,
-    dropNotice: "$300 Off Leica 1-inch Camera Beast",
+    dropNotice: "₹10,000 Off Leica 1-inch Camera Beast",
     image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=800",
     rating: 4.9,
     reviewsCount: 1800,
@@ -684,31 +699,32 @@ export const SMARTPHONES = [
       antutuScore: "2,050,000"
     },
     stores: [
-      { name: "Giztop", price: 1149, isLowest: true, inStock: true, link: "https://www.giztop.com", freeShipping: true },
-      { name: "Amazon", price: 1199, isLowest: false, inStock: true, link: "https://www.amazon.com", freeShipping: true }
+      { name: "Mi.com India", price: 84999, isLowest: true, inStock: true, link: "https://www.mi.com/in", freeShipping: true },
+      { name: "Amazon India", price: 89999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Flipkart", price: 89999, isLowest: false, inStock: true, link: "https://www.flipkart.com", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 1499 },
-      { month: "Apr", price: 1399 },
-      { month: "May", price: 1329 },
-      { month: "Jun", price: 1269 },
-      { month: "Jul", price: 1199 },
-      { month: "Aug", price: 1149 }
+      { month: "Mar", price: 99999 },
+      { month: "Apr", price: 94999 },
+      { month: "May", price: 91999 },
+      { month: "Jun", price: 89999 },
+      { month: "Jul", price: 86999 },
+      { month: "Aug", price: 84999 }
     ]
   },
   {
     id: "poco-x6-pro",
     name: "POCO X6 Pro 5G",
     brand: "Xiaomi",
-    launchPrice: 349,
-    currentPrice: 279,
-    lowestPrice: 269,
-    highestPrice: 349,
+    launchPrice: 26999,
+    currentPrice: 22999,
+    lowestPrice: 20999,
+    highestPrice: 26999,
     priceStatus: "drop",
-    priceChangeAmount: -70,
-    priceChangePercent: "-20.1%",
+    priceChangeAmount: -4000,
+    priceChangePercent: "-14.8%",
     hikeNotice: null,
-    dropNotice: "#1 Gaming Phone Under $280 (Dimensity 8300 Ultra)",
+    dropNotice: "#1 Gaming Phone Under ₹21,000 (Dimensity 8300 Ultra)",
     image: "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&q=80&w=800",
     rating: 4.8,
     reviewsCount: 5200,
@@ -726,16 +742,16 @@ export const SMARTPHONES = [
       antutuScore: "1,460,000"
     },
     stores: [
-      { name: "AliExpress", price: 269, isLowest: true, inStock: true, link: "https://www.aliexpress.com", freeShipping: true },
-      { name: "Amazon", price: 279, isLowest: false, inStock: true, link: "https://www.amazon.com", freeShipping: true }
+      { name: "Flipkart", price: 20999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Mi.com India", price: 22999, isLowest: false, inStock: true, link: "https://www.mi.com/in", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 349 },
-      { month: "Apr", price: 329 },
-      { month: "May", price: 309 },
-      { month: "Jun", price: 299 },
-      { month: "Jul", price: 279 },
-      { month: "Aug", price: 269 }
+      { month: "Mar", price: 26999 },
+      { month: "Apr", price: 24999 },
+      { month: "May", price: 23999 },
+      { month: "Jun", price: 22999 },
+      { month: "Jul", price: 21999 },
+      { month: "Aug", price: 20999 }
     ]
   },
 
@@ -744,15 +760,15 @@ export const SMARTPHONES = [
     id: "motorola-razr-50-ultra",
     name: "Motorola Razr 50 Ultra / Razr+",
     brand: "Motorola",
-    launchPrice: 999,
-    currentPrice: 849,
-    lowestPrice: 799,
-    highestPrice: 999,
+    launchPrice: 99999,
+    currentPrice: 79999,
+    lowestPrice: 74999,
+    highestPrice: 99999,
     priceStatus: "drop",
-    priceChangeAmount: -150,
-    priceChangePercent: "-15.0%",
+    priceChangeAmount: -20000,
+    priceChangePercent: "-20.0%",
     hikeNotice: null,
-    dropNotice: "Best 4.0\" Cover Display Flip Phone $150 Off",
+    dropNotice: "Best 4.0\" Cover Display Flip Phone ₹20,000 Off",
     image: "https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=800",
     rating: 4.8,
     reviewsCount: 1540,
@@ -770,17 +786,18 @@ export const SMARTPHONES = [
       antutuScore: "1,510,000"
     },
     stores: [
-      { name: "Amazon", price: 799, isLowest: true, inStock: true, link: "https://www.amazon.com", freeShipping: true },
-      { name: "Motorola Store", price: 849, isLowest: false, inStock: true, link: "https://www.motorola.com", freeShipping: true },
-      { name: "Best Buy", price: 849, isLowest: false, inStock: true, link: "https://www.bestbuy.com", freeShipping: true }
+      { name: "Flipkart", price: 74999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
+      { name: "Amazon India", price: 79999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "Reliance Digital", price: 79999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true },
+      { name: "Croma", price: 79999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true }
     ],
     priceHistory: [
-      { month: "Mar", price: 999 },
-      { month: "Apr", price: 949 },
-      { month: "May", price: 899 },
-      { month: "Jun", price: 869 },
-      { month: "Jul", price: 849 },
-      { month: "Aug", price: 799 }
+      { month: "Mar", price: 99999 },
+      { month: "Apr", price: 89999 },
+      { month: "May", price: 84999 },
+      { month: "Jun", price: 79999 },
+      { month: "Jul", price: 76999 },
+      { month: "Aug", price: 74999 }
     ]
   }
 ];

@@ -11,12 +11,13 @@ import CompareDrawer from './components/CompareDrawer';
 import { SMARTPHONES, PRIORITY_PREFERENCES } from './data/smartphones';
 import { Sparkles, ArrowUpDown, Smartphone } from 'lucide-react';
 import { soundFX } from './utils/audioEffects';
+import { formatINR } from './utils/formatters';
 import './styles/app.css';
 
 export default function App() {
   const [theme, setTheme] = useState('dark');
   const [searchQuery, setSearchQuery] = useState('');
-  const [maxBudget, setMaxBudget] = useState(1200);
+  const [maxBudget, setMaxBudget] = useState(180000);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedBrand, setSelectedBrand] = useState('All');
   const [selectedPriority, setSelectedPriority] = useState('all');
@@ -88,7 +89,7 @@ export default function App() {
         if (!matchesName && !matchesBrand && !matchesTag) return false;
       }
 
-      if (maxBudget < 1600 && phone.currentPrice > maxBudget) {
+      if (maxBudget < 180000 && phone.currentPrice > maxBudget) {
         return false;
       }
 
@@ -156,13 +157,13 @@ export default function App() {
         {/* Minimal Hero Header */}
         <section className="hero-section">
           <div className="hero-badge">
-            <Sparkles size={14} /> Python AI & Price Hike Intelligence
+            <Sparkles size={14} /> Live Indian Smartphone Price & Deal Intelligence
           </div>
           <h1 className="hero-title">
-            Smart Prices. <span>Hike Alerts.</span> Best Deals.
+            Smart Prices. <span>Indian E-Commerce Deals.</span> Python AI.
           </h1>
           <p className="hero-subtitle">
-            Track smartphone price changes, forecast 90-day market trends with Python ML, and find the lowest price links across top retailers.
+            Track prices in Indian Rupees (₹), compare Amazon India, Flipkart, Croma, Reliance Digital & Pai International deals, and forecast 90-day price trends.
           </p>
         </section>
 
@@ -187,7 +188,7 @@ export default function App() {
         <div className="phones-section-header">
           <div className="section-title">
             <Smartphone size={20} style={{ color: 'var(--accent-primary)' }} />
-            <span>Smartphone Catalog</span>
+            <span>Indian Smartphone Market</span>
             <span className="count-badge">{filteredPhones.length} Devices</span>
           </div>
 
@@ -242,7 +243,7 @@ export default function App() {
               className="btn-primary"
               style={{ margin: '1rem auto 0 auto' }}
               onClick={() => {
-                setMaxBudget(1600);
+                setMaxBudget(180000);
                 setSelectedBrand('All');
                 setIsHikeOnlyFilter(false);
                 setSearchQuery('');

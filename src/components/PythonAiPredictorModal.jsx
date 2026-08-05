@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Cpu, CheckCircle, AlertTriangle, Zap, Activity } from 'lucide-react';
 import { soundFX } from '../utils/audioEffects';
+import { formatINR } from '../utils/formatters';
 
 export default function PythonAiPredictorModal({ phone, onClose }) {
   const [prediction, setPrediction] = useState(null);
@@ -49,14 +50,15 @@ export default function PythonAiPredictorModal({ phone, onClose }) {
 
         hikeProb = Math.min(95, Math.max(10, hikeProb));
 
-        const p30 = Math.round(phone.currentPrice + (hikeProb > 60 ? 30 : -25));
-        const p60 = Math.round(phone.currentPrice + (hikeProb > 60 ? 55 : -45));
-        const p90 = Math.round(phone.currentPrice + (hikeProb > 60 ? 80 : -70));
+        const delta = hikeProb > 60 ? 3000 : -2500;
+        const p30 = Math.round(phone.currentPrice + delta);
+        const p60 = Math.round(phone.currentPrice + delta * 1.8);
+        const p90 = Math.round(phone.currentPrice + delta * 2.5);
 
         setPrediction({
           phone_id: phone.id,
           hike_probability: hikeProb,
-          risk_level: hikeProb > 65 ? "HIGH RISK OF PRICE HIKE" : "PRICE DROP ZONE",
+          risk_level: hikeProb > 65 ? "HIGH RISK OF PRICE HIKE IN INDIA" : "BUYING ZONE (PRICE DROP EXPECTED)",
           recommended_action: hikeProb > 65 ? "BUY NOW BEFORE HIKE" : "SNIPE DEAL NOW",
           projected_price_30d: p30,
           projected_price_60d: p60,
@@ -70,8 +72,8 @@ export default function PythonAiPredictorModal({ phone, onClose }) {
           ],
           insights: [
             `Python Trend Model: ${hikeProb > 60 ? 'Upward price momentum' : 'Downward value curve'}`,
-            `Historical Record Low: $${phone.lowestPrice} USD`,
-            `Current delta from launch MSRP: $${phone.currentPrice - phone.launchPrice} USD`
+            `Historical Record Low in India: ${formatINR(phone.lowestPrice)}`,
+            `Current delta from launch MSRP: ${formatINR(Math.abs(phone.currentPrice - phone.launchPrice))}`
           ]
         });
       } finally {
@@ -109,7 +111,7 @@ export default function PythonAiPredictorModal({ phone, onClose }) {
             </div>
             <div>
               <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', fontWeight: 800 }}>
-                Python ML Price Forecast
+                Python ML Price Forecast (INR ₹)
               </h2>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{phone.name}</div>
             </div>
@@ -132,7 +134,7 @@ export default function PythonAiPredictorModal({ phone, onClose }) {
         {loading ? (
           <div style={{ textAlign: 'center', padding: '3rem 0' }}>
             <Activity size={32} className="animate-spin" style={{ color: 'var(--accent-primary)', margin: '0 auto 1rem auto' }} />
-            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Analyzing market trend data...</div>
+            <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>Analyzing Indian market trend data...</div>
           </div>
         ) : prediction && (
           <div>
@@ -188,7 +190,7 @@ export default function PythonAiPredictorModal({ phone, onClose }) {
 
             {/* 90-Day Forecast */}
             <h4 style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--text-dim)', marginBottom: '0.65rem' }}>
-              90-Day Price Trend Forecast
+              90-Day Price Trend Forecast (INR)
             </h4>
 
             <div style={{
@@ -206,8 +208,8 @@ export default function PythonAiPredictorModal({ phone, onClose }) {
                   textAlign: 'center'
                 }}>
                   <div style={{ fontSize: '0.72rem', color: 'var(--text-dim)' }}>{pt.day}</div>
-                  <div style={{ fontSize: '1.1rem', fontWeight: 800, color: idx === 0 ? 'var(--accent-primary)' : 'var(--text-main)', marginTop: '0.2rem' }}>
-                    ${pt.price}
+                  <div style={{ fontSize: '1.05rem', fontWeight: 800, color: idx === 0 ? 'var(--accent-primary)' : 'var(--text-main)', marginTop: '0.2rem' }}>
+                    {formatINR(pt.price)}
                   </div>
                 </div>
               ))}

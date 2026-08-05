@@ -1,75 +1,72 @@
-# 📱 PhonePulse — Python AI Price Tracker  
+# PhonePulse: Indian Smartphone Price Hike & Deal Intelligence Hub 🇮🇳📱
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?logo=fastapi)
-![React](https://img.shields.io/badge/React-18.2-blue?logo=react)
-![Vite](https://img.shields.io/badge/Vite-5.1-646CFF?logo=vite)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+PhonePulse is a full-stack AI-powered smartphone price tracker, price hike alert engine, and Indian retailer deal comparator built with **React 18 + Vite** and a **Python FastAPI Machine Learning backend**.
 
-PhonePulse is a modern, high-performance web application combining a **Python FastAPI Machine Learning Backend**. It tracks price hikes vs drops, forecasts 90-day price curves, recommends smartphones based on budget RPM telemetry, and finds the cheapest store deals.
+![Obsidian Dark UI](https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=1200)
 
----
+## ✨ Core Features
 
-## 🐍 Python AI Features
+1. **🇮🇳 Indian Rupee (₹) Market Pricing & Retailer Comparison**:
+   - Compares live prices across **Amazon India (`Amazon.in`)**, **Flipkart**, **Croma**, **Reliance Digital**, **Pai International**, **Vijay Sales**, and **Official Brand Stores** (Apple India, Samsung India, OnePlus India, Mi India).
+   - Highlights the **⚡ Lowest Price Deal** vendor for every smartphone model.
 
-- **FastAPI Machine Learning Service (`backend/main.py`)**:
-  - `/api/predict-hike`: Uses Python's `numpy` and polynomial regression to calculate:
-    - 🔴 **Price Hike Risk Index %**
-    - 📊 **90-Day Projected Price Curve** (+30d, +60d, +90d)
-    - 🏎️ **Recommended Action** (`BUY NOW BEFORE HIKE` vs `SNIPE DEAL NOW` vs `WAIT FOR PIT STOP`)
-    - 💡 **Algorithm Trend Insights** (Slope $/mo & Volatility index)
-- **Built-in Fallback**: If the Python server isn't running locally, the frontend seamlessly executes a browser-side Python-equivalent trend model so it works offline or when hosted on static GitHub Pages!
+2. **🔴 Real-Time Price Hike & Price Drop Alerts**:
+   - **`🔴 Price Hike`**: Triggers when a smartphone price increases due to high market demand or supply shortages.
+   - **`🟢 Price Drop`**: Highlights active festive discounts and instant price drops off MSRP.
+   - **`⚡ Record Low`**: Identifies all-time lowest price records in India.
 
----
+3. **📊 6-Month Interactive SVG Price History & Email Alerts**:
+   - Interactive price curve displaying 6-month historical price movements.
+   - Integrated email alert form allowing users to set target price drop notifications in ₹ INR.
 
-## 🏎️ High-Octane Interactive Features
+4. **🤖 Python FastAPI Machine Learning Trend Engine**:
+   - Polynomial regression model predicting 30-day, 60-day, and 90-day price trajectories.
+   - Calculates a **Price Hike Risk Index (%)** and recommends strategic buying advice (*"BUY NOW BEFORE HIKE"* vs *"SNIPE DEAL NOW"*).
 
-- ⚡ **Best recommender**Real-time market stream showing live price hikes, record low deals, and instant deal toggles.
-- ⏱️ **Speedometer Budget RPM Gauge**: Custom interactive SVG gauge for setting budget limits with visual speed/RPM feedback.
-- 🔊 **Web Audio Synthesizer**: Native browser Web Audio feedback FX for button clicks, gear shifts, price hike alarms, and deal victory sounds.
-- 🛒 **Cheapest Store Deal Link Finder**: Compares live price links across **Amazon, Best Buy, Walmart, Official Store, B&H Photo, and eBay**, highlighting the cheapest retailer.
-- ⚔️ **Side-by-Side specification & Price Comparison**: Compare up to 3 smartphones side-by-side.
+5. **⚡ Side-by-Side Spec & Price Comparison Drawer**:
+   - Compare up to 3 smartphones simultaneously across chipset, display, camera setup, battery charging speed, and lowest available price in India.
 
 ---
 
-## 🚀 Running the Project
+## 🛠️ Technology Stack
 
-### 1. Run the Python AI Backend
-```bash
-cd backend
-python main.py
-```
-*The Python FastAPI server will launch on `http://localhost:8000`.*
+- **Frontend**: React 18, Vite, Lucide Icons, Web Audio API Sound Effects.
+- **Styling**: Vanilla CSS with obsidian dark theme (`#070A0E`), electric cyan accents (`#00F0FF`), and glassmorphism.
+- **Backend**: Python 3.10+, FastAPI, NumPy, Uvicorn.
+- **Deployment**: Node.js static build + FastAPI service.
 
-To test the Python API endpoints:
-```bash
-python test_api.py
-```
+---
 
-### 2. Run the Frontend (React + Vite)
+## 🚀 Quick Start Guide
+
+### 1. Run Frontend App locally
+
 ```bash
+# Install dependencies
 npm install
+
+# Start Vite Dev Server
 npm run dev
 ```
-*Open `http://localhost:3000` in your browser.*
+
+The app will launch at `http://localhost:3000`.
+
+### 2. Run Python ML Backend (Optional)
+
+```bash
+cd backend
+
+# Install Python dependencies
+pip install -r requirements.txt
+
+# Start FastAPI server
+uvicorn main:app --reload --port 8000
+```
+
+The ML server will be active at `http://localhost:8000`.
 
 ---
 
-## 📤 How to Publish to GitHub
+## 📜 License
 
-1. **Initialize Git**:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: PhonePulse Python AI & Telemetry Hub"
-   ```
-
-2. **Push to GitHub**:
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/smart-phone-finder.git
-   git branch -M main
-   git push -u origin main
-   ```
-
----
-
+MIT License © 2026 Abhinav M.

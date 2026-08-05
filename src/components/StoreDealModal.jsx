@@ -1,131 +1,111 @@
 import React from 'react';
-import { X, ShoppingCart, ExternalLink, Check, ShieldCheck, Tag } from 'lucide-react';
+import { X, ExternalLink, ShieldCheck, Tag, ShoppingBag, Truck } from 'lucide-react';
+import { soundFX } from '../utils/audioEffects';
+import { formatINR } from '../utils/formatters';
 
 export default function StoreDealModal({ phone, onClose }) {
   if (!phone) return null;
-
-  const stores = [...phone.stores].sort((a, b) => a.price - b.price);
-  const lowest = stores[0];
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close-btn" onClick={onClose}>
-          <X size={20} />
+          <X size={18} />
         </button>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.25rem' }}>
-          <ShoppingCart size={24} style={{ color: '#10B981' }} />
-          <div>
-            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem' }}>
-              Cheapest Store Price Comparison
-            </h2>
-            <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{phone.name}</div>
+        {/* Modal Header */}
+        <div style={{ marginBottom: '1.25rem' }}>
+          <div style={{ fontSize: '0.8rem', color: 'var(--accent-primary)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            Live Indian E-Commerce Deal Comparator
+          </div>
+          <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 800 }}>
+            {phone.name}
+          </h2>
+          <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+            Compare prices across Amazon India, Flipkart, Croma, Reliance Digital, Pai International & Official Stores
           </div>
         </div>
 
-        {/* Highlight Banner */}
-        <div style={{
-          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(99, 102, 241, 0.15) 100%)',
-          border: '1px solid #10B981',
-          padding: '1rem',
-          borderRadius: '14px',
-          marginBottom: '1.5rem',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center'
-        }}>
-          <div>
-            <div style={{ fontSize: '0.78rem', textTransform: 'uppercase', fontWeight: 700, color: '#10B981', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-              <Tag size={14} /> Lowest Price Deal Found
-            </div>
-            <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.3rem', fontWeight: 800 }}>
-              ${lowest.price} at {lowest.name}
-            </div>
-            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-              Save up to ${(phone.highestPrice - lowest.price)} compared to MSRP peak!
-            </div>
-          </div>
-
-          <a
-            href={lowest.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-            style={{ padding: '0.75rem 1.25rem' }}
-          >
-            Buy Now <ExternalLink size={14} />
-          </a>
-        </div>
-
-        {/* Store Links List */}
-        <h4 style={{ fontSize: '0.9rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-dim)', marginBottom: '0.75rem' }}>
-          Available Store Deals ({stores.length})
-        </h4>
-
+        {/* Store List */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-          {stores.map((store, idx) => (
+          {phone.stores?.map((store, index) => (
             <div
-              key={idx}
-              className={`store-link-row ${store.isLowest ? 'lowest' : ''}`}
+              key={index}
+              style={{
+                background: store.isLowest ? 'rgba(0, 240, 255, 0.06)' : 'rgba(255, 255, 255, 0.02)',
+                border: `1px solid ${store.isLowest ? 'var(--accent-primary)' : 'var(--border-subtle)'}`,
+                padding: '0.85rem 1.1rem',
+                borderRadius: '10px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                flexWrap: 'wrap',
+                gap: '0.75rem'
+              }}
             >
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                 <div style={{
-                  width: '38px',
-                  height: '38px',
-                  borderRadius: '10px',
-                  background: 'rgba(255, 255, 255, 0.05)',
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '8px',
+                  background: 'rgba(255, 255, 255, 0.06)',
                   border: '1px solid var(--border-subtle)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontWeight: 800,
-                  fontSize: '0.85rem'
+                  fontSize: '0.85rem',
+                  color: 'var(--accent-primary)'
                 }}>
-                  {store.name.substring(0, 2)}
+                  <ShoppingBag size={18} />
                 </div>
 
                 <div>
-                  <div style={{ fontWeight: 700, fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                    {store.name}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <span style={{ fontWeight: 700, fontSize: '0.95rem' }}>{store.name}</span>
                     {store.isLowest && (
                       <span style={{
-                        background: '#10B981',
-                        color: 'white',
-                        fontSize: '0.65rem',
+                        background: 'rgba(16, 185, 129, 0.15)',
+                        border: '1px solid #10B981',
+                        color: '#34D399',
+                        fontSize: '0.68rem',
                         fontWeight: 800,
                         padding: '0.15rem 0.45rem',
                         borderRadius: '4px',
                         textTransform: 'uppercase'
                       }}>
-                        Cheapest
+                        ⚡ Lowest Price Deal
                       </span>
                     )}
                   </div>
-                  <div style={{ fontSize: '0.78rem', color: 'var(--text-dim)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <ShieldCheck size={12} style={{ color: '#38BDF8' }} /> Verified Retailer • {store.freeShipping ? 'Free Shipping' : 'Standard Shipping'}
+                  <div style={{ fontSize: '0.75rem', color: 'var(--text-dim)', marginTop: '0.15rem', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                    <Truck size={12} /> {store.freeShipping ? 'Free Delivery Across India' : 'Standard Shipping'} • In Stock
                   </div>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <div style={{ textAlign: 'right' }}>
-                  <div className="store-price" style={{ color: store.isLowest ? '#10B981' : 'var(--text-main)' }}>
-                    ${store.price}
+                  <div style={{ fontSize: '1.2rem', fontWeight: 800, color: store.isLowest ? 'var(--accent-primary)' : 'var(--text-main)' }}>
+                    {formatINR(store.price)}
                   </div>
-                  <div style={{ fontSize: '0.72rem', color: store.inStock ? '#10B981' : '#EF4444' }}>
-                    {store.inStock ? 'In Stock' : 'Out of Stock'}
-                  </div>
+                  {phone.launchPrice > store.price && (
+                    <div style={{ fontSize: '0.72rem', color: '#34D399' }}>
+                      Save {formatINR(phone.launchPrice - store.price)}
+                    </div>
+                  )}
                 </div>
 
                 <a
                   href={store.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={store.isLowest ? 'btn-primary' : 'btn-secondary'}
-                  style={{ textDecoration: 'none', padding: '0.55rem 0.85rem' }}
+                  className="btn-primary"
+                  onClick={() => soundFX.playClick()}
+                  style={{ textDecoration: 'none', padding: '0.5rem 0.85rem', fontSize: '0.82rem' }}
                 >
-                  Visit Store <ExternalLink size={14} />
+                  <span>Buy Now</span>
+                  <ExternalLink size={13} />
                 </a>
               </div>
             </div>

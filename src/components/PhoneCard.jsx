@@ -1,47 +1,55 @@
 import React from 'react';
 import { 
-  TrendingDown, TrendingUp, Flame, ExternalLink, LineChart, 
-  ShoppingCart, Scale, Check, Cpu, Tv, Camera, Battery, Zap 
+  Check, Plus, Sparkles, TrendingUp, TrendingDown, 
+  Store, Cpu, ShieldCheck, Zap
 } from 'lucide-react';
 import { soundFX } from '../utils/audioEffects';
+import { formatINR } from '../utils/formatters';
 
-export default function PhoneCard({ 
-  phone, 
-  matchScore, 
-  onOpenPriceHistory, 
-  onOpenStoreDeals, 
+export default function PhoneCard({
+  phone,
+  matchScore,
+  onOpenPriceHistory,
+  onOpenStoreDeals,
   onOpenPythonAi,
-  onToggleCompare, 
-  isCompared 
+  onToggleCompare,
+  isCompared
 }) {
-  const lowestStore = phone.stores.find(s => s.isLowest) || phone.stores[0];
+  const lowestStore = phone.stores?.find(s => s.isLowest) || phone.stores?.[0];
 
   return (
     <div className="glass-panel phone-card">
-      {/* Top Banner & Image */}
-      <div className="card-top">
-        <div className="card-badges">
+      {/* Card Header Badges */}
+      <div className="phone-card-header">
+        <div className="brand-badge">{phone.brand}</div>
+
+        <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
           {phone.priceStatus === 'hike' && (
-            <div className="status-badge badge-hike">
-              <TrendingUp size={14} /> Price Hike
-            </div>
-          )}
-          {phone.priceStatus === 'drop' && (
-            <div className="status-badge badge-drop">
-              <TrendingDown size={14} /> Price Drop
-            </div>
-          )}
-          {phone.priceStatus === 'lowest' && (
-            <div className="status-badge badge-lowest">
-              <Flame size={14} /> Record Low
+            <div className="badge-hike">
+              <TrendingUp size={12} /> Hike
             </div>
           )}
 
-          <div className="match-score-badge" title="AI Match Score based on your budget & preference priorities">
-            {matchScore}% Match
+          {phone.priceStatus === 'drop' && (
+            <div className="badge-drop">
+              <TrendingDown size={12} /> Price Drop
+            </div>
+          )}
+
+          {phone.priceStatus === 'lowest' && (
+            <div className="badge-drop">
+              <Zap size={12} /> Record Low
+            </div>
+          )}
+
+          <div className="match-score">
+            <Sparkles size={12} /> {matchScore}% Match
           </div>
         </div>
+      </div>
 
+      {/* Product Image & Badges */}
+      <div style={{ position: 'relative', textAlign: 'center' }}>
         <img 
           src={phone.image} 
           alt={phone.name} 
@@ -50,139 +58,81 @@ export default function PhoneCard({
         />
       </div>
 
-      {/* Card Content */}
-      <div className="card-body">
-        <div className="phone-brand">{phone.brand} • {phone.category}</div>
-        <h3 className="phone-name">{phone.name}</h3>
+      {/* Card Body */}
+      <div className="phone-card-body">
+        <h3 className="phone-title">{phone.name}</h3>
 
-        {/* Pricing Row */}
-        <div className="card-price-row">
-          <span className="current-price">${phone.currentPrice}</span>
-          {phone.launchPrice > phone.currentPrice && (
-            <span className="launch-price">${phone.launchPrice}</span>
-          )}
-          <span style={{ 
-            fontSize: '0.85rem', 
-            fontWeight: 800, 
-            color: phone.priceStatus === 'hike' ? '#EF4444' : '#10B981',
-            marginLeft: 'auto'
-          }}>
-            {phone.priceChangePercent}
-          </span>
-        </div>
+        {/* Pricing Info */}
+        <div style={{ margin: '0.75rem 0' }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
+            <span className="price-current">{formatINR(phone.currentPrice)}</span>
+            {phone.launchPrice > phone.currentPrice && (
+              <span className="price-original">{formatINR(phone.launchPrice)}</span>
+            )}
+          </div>
 
-        {/* Hike Alert or Drop Alert Notice */}
-        {phone.hikeNotice && (
-          <div className="hike-alert-text">
-            {phone.hikeNotice}
-          </div>
-        )}
-        {phone.dropNotice && (
-          <div className="drop-alert-text">
-            {phone.dropNotice}
-          </div>
-        )}
-
-        {/* Key Specs */}
-        <div className="spec-list">
-          <div className="spec-item">
-            <Cpu size={14} style={{ color: '#FF8700', flexShrink: 0 }} />
-            <span>{phone.specs.chipset}</span>
-          </div>
-          <div className="spec-item">
-            <Tv size={14} style={{ color: '#00F0FF', flexShrink: 0 }} />
-            <span>{phone.specs.display}</span>
-          </div>
-          <div className="spec-item">
-            <Camera size={14} style={{ color: '#F472B6', flexShrink: 0 }} />
-            <span>{phone.specs.camera}</span>
-          </div>
-          <div className="spec-item">
-            <Battery size={14} style={{ color: '#34D399', flexShrink: 0 }} />
-            <span>{phone.specs.battery}</span>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.35rem' }}>
+            <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>
+              Lowest: <strong style={{ color: 'var(--accent-green)' }}>{formatINR(phone.lowestPrice)}</strong>
+            </span>
+            {lowestStore && (
+              <span style={{ fontSize: '0.72rem', color: 'var(--accent-primary)', fontWeight: 600 }}>
+                {lowestStore.name}
+              </span>
+            )}
           </div>
         </div>
 
-        {/* Cheapest Store Callout */}
-        <div style={{
-          fontSize: '0.8rem',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '0.5rem 0.75rem',
-          borderRadius: '8px',
-          background: 'rgba(16, 185, 129, 0.08)',
-          border: '1px dashed rgba(16, 185, 129, 0.3)',
-          marginBottom: '0.85rem'
-        }}>
-          <span style={{ color: 'var(--text-muted)' }}>
-            Lowest at <strong>{lowestStore.name}</strong>:
-          </span>
-          <a
-            href={lowestStore.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => soundFX.playClick()}
-            style={{
-              color: '#10B981',
-              fontWeight: 800,
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.25rem',
-              textDecoration: 'none'
+        {/* Key Specs Pills */}
+        <div className="spec-pills">
+          <span className="pill">{phone.specs.chipset.split(' ')[0]} {phone.specs.chipset.split(' ')[1] || ''}</span>
+          <span className="pill">{phone.specs.ramStorage.split('/')[0]}</span>
+          <span className="pill">{phone.specs.camera.split('+')[0]}</span>
+        </div>
+
+        {/* Action Buttons */}
+        <div className="card-actions">
+          <button 
+            className="btn-secondary"
+            onClick={() => {
+              soundFX.playClick();
+              onOpenPriceHistory(phone);
             }}
           >
-            ${lowestStore.price} <ExternalLink size={12} />
-          </a>
+            <TrendingUp size={13} /> 6M Chart
+          </button>
+
+          <button 
+            className="btn-secondary"
+            onClick={() => {
+              soundFX.playClick();
+              onOpenStoreDeals(phone);
+            }}
+          >
+            <Store size={13} /> Stores ({phone.stores?.length || 0})
+          </button>
         </div>
 
-        {/* Python AI Trigger Button */}
-        <button
-          className="btn-python"
+        <button 
+          className="btn-python-ai"
           onClick={() => {
-            soundFX.playGearShift();
+            soundFX.playClick();
             onOpenPythonAi(phone);
           }}
         >
-          🐍 Python AI Price Hike Forecast
+          <Cpu size={14} /> Python AI Forecast & Risk Score
         </button>
 
-        {/* Actions */}
-        <div className="card-actions" style={{ marginTop: '0.65rem' }}>
-          <button className="btn-primary" onClick={() => { soundFX.playClick(); onOpenStoreDeals(phone); }}>
-            <ShoppingCart size={16} /> Deals
-          </button>
-          
-          <button className="btn-secondary" onClick={() => { soundFX.playClick(); onOpenPriceHistory(phone); }}>
-            <LineChart size={16} /> History
-          </button>
-        </div>
-
+        {/* Compare Toggle */}
         <button
+          className={`compare-btn ${isCompared ? 'active' : ''}`}
           onClick={() => {
             soundFX.playClick();
             onToggleCompare(phone);
           }}
-          style={{
-            marginTop: '0.65rem',
-            width: '100%',
-            background: isCompared ? 'rgba(255, 135, 0, 0.2)' : 'transparent',
-            border: isCompared ? '1px solid #FF8700' : '1px solid var(--border-subtle)',
-            color: isCompared ? '#FF8700' : 'var(--text-dim)',
-            padding: '0.45rem',
-            borderRadius: '8px',
-            fontSize: '0.78rem',
-            fontWeight: 700,
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '0.35rem',
-            transition: 'all 0.2s ease'
-          }}
         >
-          {isCompared ? <Check size={14} /> : <Scale size={14} />}
-          {isCompared ? 'Added to Compare' : '+ Add to Compare'}
+          {isCompared ? <Check size={14} /> : <Plus size={14} />}
+          <span>{isCompared ? 'Added to Compare' : 'Add to Side-by-Side Compare'}</span>
         </button>
       </div>
     </div>
