@@ -84,7 +84,7 @@ def predict_price_hike(data: HikePredictionRequest):
         hike_score -= 20.0
 
     # If current price is near highest historical price
-    if data.currentPrice >= data.highest_price - 20:
+    if data.current_price >= data.highest_price - 20:
         hike_score += 20.0
     
     # If slope is positive (upward price trend)
