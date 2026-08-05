@@ -1,10 +1,10 @@
 import React from 'react';
 import { 
   Check, Plus, Sparkles, TrendingUp, TrendingDown, 
-  Store, Cpu, Zap
+  Store, Cpu, Zap, ExternalLink
 } from 'lucide-react';
 import { soundFX } from '../utils/audioEffects';
-import { formatINR } from '../utils/formatters';
+import { formatINR, getStoreLink } from '../utils/formatters';
 
 export default function PhoneCard({
   phone,
@@ -16,6 +16,7 @@ export default function PhoneCard({
   isCompared
 }) {
   const lowestStore = phone.stores?.find(s => s.isLowest) || phone.stores?.[0];
+  const directLowestLink = lowestStore ? getStoreLink(lowestStore.name, phone.name) : `https://www.amazon.in/s?k=${encodeURIComponent(phone.name)}`;
 
   return (
     <div className="phone-card">
@@ -71,14 +72,30 @@ export default function PhoneCard({
             )}
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.3rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.36rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>
               Lowest: <strong style={{ color: 'var(--accent-green)' }}>{formatINR(phone.lowestPrice)}</strong>
             </span>
+            
             {lowestStore && (
-              <span style={{ fontSize: '0.72rem', color: 'var(--accent-primary)', fontWeight: 600 }}>
-                {lowestStore.name}
-              </span>
+              <a 
+                href={directLowestLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => soundFX.playClick()}
+                style={{ 
+                  fontSize: '0.75rem', 
+                  color: 'var(--accent-primary)', 
+                  fontWeight: 700,
+                  textDecoration: 'none',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.2rem'
+                }}
+                title={`Click to open ${phone.name} on ${lowestStore.name}`}
+              >
+                Buy on {lowestStore.name.split(' ')[0]} <ExternalLink size={11} />
+              </a>
             )}
           </div>
         </div>
@@ -109,7 +126,7 @@ export default function PhoneCard({
               onOpenStoreDeals(phone);
             }}
           >
-            <Store size={13} /> Stores ({phone.stores?.length || 0})
+            <Store size={13} /> Retailers ({phone.stores?.length || 0})
           </button>
         </div>
 

@@ -1,3 +1,5 @@
+import { getStoreLink } from '../utils/formatters';
+
 export const SMARTPHONES = [
   // --- ONEPLUS SERIES ---
   {
@@ -36,8 +38,9 @@ export const SMARTPHONES = [
       antutuScore: "3,050,000"
     },
     stores: [
-      { name: "OnePlus Store India", price: 74999, isLowest: true, inStock: true, link: "https://www.oneplus.in", freeShipping: true },
-      { name: "Amazon India", price: 79999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true }
+      { name: "OnePlus Store India", price: 74999, isLowest: true, inStock: true, link: getStoreLink("OnePlus Store India", "OnePlus 15 5G"), freeShipping: true },
+      { name: "Amazon India", price: 79999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "OnePlus 15 5G"), freeShipping: true },
+      { name: "Flipkart", price: 79999, isLowest: false, inStock: true, link: getStoreLink("Flipkart", "OnePlus 15 5G"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 79999 },
@@ -84,8 +87,9 @@ export const SMARTPHONES = [
       antutuScore: "2,450,000"
     },
     stores: [
-      { name: "Amazon India", price: 46999, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
-      { name: "OnePlus Store India", price: 49999, isLowest: false, inStock: true, link: "https://www.oneplus.in", freeShipping: true }
+      { name: "Amazon India", price: 46999, isLowest: true, inStock: true, link: getStoreLink("Amazon India", "OnePlus 15R 5G"), freeShipping: true },
+      { name: "Flipkart", price: 48999, isLowest: false, inStock: true, link: getStoreLink("Flipkart", "OnePlus 15R 5G"), freeShipping: true },
+      { name: "OnePlus Store India", price: 49999, isLowest: false, inStock: true, link: getStoreLink("OnePlus Store India", "OnePlus 15R 5G"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 49999 },
@@ -132,8 +136,9 @@ export const SMARTPHONES = [
       antutuScore: "2,920,000"
     },
     stores: [
-      { name: "OnePlus Store India", price: 69999, isLowest: true, inStock: true, link: "https://www.oneplus.in", freeShipping: true },
-      { name: "Amazon India", price: 72999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true }
+      { name: "OnePlus Store India", price: 69999, isLowest: true, inStock: true, link: getStoreLink("OnePlus Store India", "OnePlus 13 5G"), freeShipping: true },
+      { name: "Amazon India", price: 72999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "OnePlus 13 5G"), freeShipping: true },
+      { name: "Croma", price: 72999, isLowest: false, inStock: true, link: getStoreLink("Croma", "OnePlus 13 5G"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 69999 },
@@ -182,8 +187,10 @@ export const SMARTPHONES = [
       antutuScore: "2,150,000"
     },
     stores: [
-      { name: "Apple Store India", price: 149900, isLowest: true, inStock: true, link: "https://www.apple.com/in/", freeShipping: true },
-      { name: "Amazon India", price: 149900, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true }
+      { name: "Apple Store India", price: 144900, isLowest: true, inStock: true, link: getStoreLink("Apple Store India", "Apple iPhone 17 Pro Max"), freeShipping: true },
+      { name: "Amazon India", price: 149900, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "Apple iPhone 17 Pro Max"), freeShipping: true },
+      { name: "Flipkart", price: 149900, isLowest: false, inStock: true, link: getStoreLink("Flipkart", "Apple iPhone 17 Pro Max"), freeShipping: true },
+      { name: "Croma", price: 149900, isLowest: false, inStock: true, link: getStoreLink("Croma", "Apple iPhone 17 Pro Max"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 149900 },
@@ -230,8 +237,9 @@ export const SMARTPHONES = [
       antutuScore: "1,750,000"
     },
     stores: [
-      { name: "Amazon India", price: 76900, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
-      { name: "Flipkart", price: 79900, isLowest: false, inStock: true, link: "https://www.flipkart.com", freeShipping: true }
+      { name: "Amazon India", price: 76900, isLowest: true, inStock: true, link: getStoreLink("Amazon India", "Apple iPhone 17"), freeShipping: true },
+      { name: "Flipkart", price: 79900, isLowest: false, inStock: true, link: getStoreLink("Flipkart", "Apple iPhone 17"), freeShipping: true },
+      { name: "Croma", price: 79900, isLowest: false, inStock: true, link: getStoreLink("Croma", "Apple iPhone 17"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 79900 },
@@ -280,8 +288,9 @@ export const SMARTPHONES = [
       antutuScore: "3,100,000"
     },
     stores: [
-      { name: "Samsung India", price: 134999, isLowest: true, inStock: true, link: "https://www.samsung.com/in/", freeShipping: true },
-      { name: "Amazon India", price: 139999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true }
+      { name: "Samsung India", price: 134999, isLowest: true, inStock: true, link: getStoreLink("Samsung India", "Samsung Galaxy S26 Ultra"), freeShipping: true },
+      { name: "Amazon India", price: 139999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "Samsung Galaxy S26 Ultra"), freeShipping: true },
+      { name: "Flipkart", price: 139999, isLowest: false, inStock: true, link: getStoreLink("Flipkart", "Samsung Galaxy S26 Ultra"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 139999 },
@@ -328,8 +337,9 @@ export const SMARTPHONES = [
       antutuScore: "2,750,000"
     },
     stores: [
-      { name: "Samsung India", price: 129999, isLowest: true, inStock: true, link: "https://www.samsung.com/in/", freeShipping: true },
-      { name: "Amazon India", price: 134999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true }
+      { name: "Samsung India", price: 129999, isLowest: true, inStock: true, link: getStoreLink("Samsung India", "Samsung Galaxy S25 Ultra"), freeShipping: true },
+      { name: "Amazon India", price: 134999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "Samsung Galaxy S25 Ultra"), freeShipping: true },
+      { name: "Flipkart", price: 134999, isLowest: false, inStock: true, link: getStoreLink("Flipkart", "Samsung Galaxy S25 Ultra"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 129999 },
@@ -378,8 +388,9 @@ export const SMARTPHONES = [
       antutuScore: "1,850,000"
     },
     stores: [
-      { name: "Flipkart", price: 124999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
-      { name: "Croma", price: 129999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true }
+      { name: "Flipkart", price: 124999, isLowest: true, inStock: true, link: getStoreLink("Flipkart", "Google Pixel 10 Pro XL"), freeShipping: true },
+      { name: "Croma", price: 129999, isLowest: false, inStock: true, link: getStoreLink("Croma", "Google Pixel 10 Pro XL"), freeShipping: true },
+      { name: "Amazon India", price: 129999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "Google Pixel 10 Pro XL"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 129999 },
@@ -426,8 +437,9 @@ export const SMARTPHONES = [
       antutuScore: "1,310,000"
     },
     stores: [
-      { name: "Flipkart", price: 109999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
-      { name: "Croma", price: 114999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true }
+      { name: "Flipkart", price: 109999, isLowest: true, inStock: true, link: getStoreLink("Flipkart", "Google Pixel 9 Pro XL"), freeShipping: true },
+      { name: "Croma", price: 114999, isLowest: false, inStock: true, link: getStoreLink("Croma", "Google Pixel 9 Pro XL"), freeShipping: true },
+      { name: "Amazon India", price: 114999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "Google Pixel 9 Pro XL"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 124999 },
@@ -476,8 +488,9 @@ export const SMARTPHONES = [
       antutuScore: "805,000"
     },
     stores: [
-      { name: "Flipkart", price: 22999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
-      { name: "Croma", price: 24999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true }
+      { name: "Flipkart", price: 22999, isLowest: true, inStock: true, link: getStoreLink("Flipkart", "Nothing Phone 2a Plus"), freeShipping: true },
+      { name: "Croma", price: 24999, isLowest: false, inStock: true, link: getStoreLink("Croma", "Nothing Phone 2a Plus"), freeShipping: true },
+      { name: "Amazon India", price: 24999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "Nothing Phone 2a Plus"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 27999 },
@@ -524,8 +537,9 @@ export const SMARTPHONES = [
       antutuScore: "670,000"
     },
     stores: [
-      { name: "Flipkart", price: 12999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
-      { name: "Croma", price: 13999, isLowest: false, inStock: true, link: "https://www.croma.com", freeShipping: true }
+      { name: "Flipkart", price: 12999, isLowest: true, inStock: true, link: getStoreLink("Flipkart", "CMF Phone 1 by Nothing"), freeShipping: true },
+      { name: "Croma", price: 13999, isLowest: false, inStock: true, link: getStoreLink("Croma", "CMF Phone 1 by Nothing"), freeShipping: true },
+      { name: "Amazon India", price: 13999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "CMF Phone 1 by Nothing"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 15999 },
@@ -574,8 +588,9 @@ export const SMARTPHONES = [
       antutuScore: "1,460,000"
     },
     stores: [
-      { name: "Flipkart", price: 20999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
-      { name: "Mi.com India", price: 22999, isLowest: false, inStock: true, link: "https://www.mi.com/in", freeShipping: true }
+      { name: "Flipkart", price: 20999, isLowest: true, inStock: true, link: getStoreLink("Flipkart", "POCO X6 Pro 5G"), freeShipping: true },
+      { name: "Mi.com India", price: 22999, isLowest: false, inStock: true, link: getStoreLink("Mi.com India", "POCO X6 Pro 5G"), freeShipping: true },
+      { name: "Amazon India", price: 22999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "POCO X6 Pro 5G"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 26999 },
@@ -622,8 +637,9 @@ export const SMARTPHONES = [
       antutuScore: "1,510,000"
     },
     stores: [
-      { name: "Flipkart", price: 74999, isLowest: true, inStock: true, link: "https://www.flipkart.com", freeShipping: true },
-      { name: "Amazon India", price: 79999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true }
+      { name: "Flipkart", price: 74999, isLowest: true, inStock: true, link: getStoreLink("Flipkart", "Motorola Razr 50 Ultra"), freeShipping: true },
+      { name: "Amazon India", price: 79999, isLowest: false, inStock: true, link: getStoreLink("Amazon India", "Motorola Razr 50 Ultra"), freeShipping: true },
+      { name: "Croma", price: 79999, isLowest: false, inStock: true, link: getStoreLink("Croma", "Motorola Razr 50 Ultra"), freeShipping: true }
     ],
     priceHistory: [
       { month: "Mar", price: 99999 },
