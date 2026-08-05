@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Check, Plus, Sparkles, TrendingUp, TrendingDown, 
-  Store, Cpu, ShieldCheck, Zap
+  Store, Cpu, Zap
 } from 'lucide-react';
 import { soundFX } from '../utils/audioEffects';
 import { formatINR } from '../utils/formatters';
@@ -18,7 +18,7 @@ export default function PhoneCard({
   const lowestStore = phone.stores?.find(s => s.isLowest) || phone.stores?.[0];
 
   return (
-    <div className="glass-panel phone-card">
+    <div className="phone-card">
       {/* Card Header Badges */}
       <div className="phone-card-header">
         <div className="brand-badge">{phone.brand}</div>
@@ -26,30 +26,30 @@ export default function PhoneCard({
         <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center' }}>
           {phone.priceStatus === 'hike' && (
             <div className="badge-hike">
-              <TrendingUp size={12} /> Hike
+              <TrendingUp size={11} /> Hike
             </div>
           )}
 
           {phone.priceStatus === 'drop' && (
             <div className="badge-drop">
-              <TrendingDown size={12} /> Price Drop
+              <TrendingDown size={11} /> Price Drop
             </div>
           )}
 
           {phone.priceStatus === 'lowest' && (
             <div className="badge-drop">
-              <Zap size={12} /> Record Low
+              <Zap size={11} /> Record Low
             </div>
           )}
 
           <div className="match-score">
-            <Sparkles size={12} /> {matchScore}% Match
+            <Sparkles size={11} /> {matchScore}% Match
           </div>
         </div>
       </div>
 
-      {/* Product Image & Badges */}
-      <div style={{ position: 'relative', textAlign: 'center' }}>
+      {/* Clean Dark Image Container */}
+      <div className="phone-img-container">
         <img 
           src={phone.image} 
           alt={phone.name} 
@@ -63,7 +63,7 @@ export default function PhoneCard({
         <h3 className="phone-title">{phone.name}</h3>
 
         {/* Pricing Info */}
-        <div style={{ margin: '0.75rem 0' }}>
+        <div style={{ margin: '0.6rem 0' }}>
           <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
             <span className="price-current">{formatINR(phone.currentPrice)}</span>
             {phone.launchPrice > phone.currentPrice && (
@@ -71,7 +71,7 @@ export default function PhoneCard({
             )}
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.35rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.3rem' }}>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-dim)' }}>
               Lowest: <strong style={{ color: 'var(--accent-green)' }}>{formatINR(phone.lowestPrice)}</strong>
             </span>
@@ -85,8 +85,8 @@ export default function PhoneCard({
 
         {/* Key Specs Pills */}
         <div className="spec-pills">
-          <span className="pill">{phone.specs.chipset.split(' ')[0]} {phone.specs.chipset.split(' ')[1] || ''}</span>
-          <span className="pill">{phone.specs.ramStorage.split('/')[0]}</span>
+          <span className="pill">{phone.specs.chipset}</span>
+          <span className="pill">{phone.specs.ramStorage}</span>
           <span className="pill">{phone.specs.camera.split('+')[0]}</span>
         </div>
 
