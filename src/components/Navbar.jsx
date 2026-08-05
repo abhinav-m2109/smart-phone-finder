@@ -12,22 +12,24 @@ export default function Navbar({ theme, toggleTheme, compareList, onOpenCompare 
 
   return (
     <nav className="navbar">
-      {/* Brand Header */}
+      {/* Brand Header on Far Left */}
       <div className="nav-brand">
         <div className="nav-logo-icon">
-          <Smartphone size={20} />
+          <Smartphone size={22} />
         </div>
-        <div>
-          <div className="nav-title">
-            SmartPhone-<span>Scouter</span>
-          </div>
+        <div className="nav-title">
+          SmartPhone-<span>Scouter</span>
         </div>
       </div>
 
-      {/* Right Controls */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+      {/* Far Right Controls (Compare Badge, Sound Mute, Theme Switcher) */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
         {compareList.length > 0 && (
-          <button className="btn-primary" onClick={onOpenCompare} style={{ fontSize: '0.8rem', padding: '0.45rem 0.85rem' }}>
+          <button 
+            className="btn-primary" 
+            onClick={onOpenCompare} 
+            style={{ fontSize: '0.8rem', padding: '0.45rem 0.85rem' }}
+          >
             Compare ({compareList.length})
           </button>
         )}
@@ -35,39 +37,41 @@ export default function Navbar({ theme, toggleTheme, compareList, onOpenCompare 
         <button
           onClick={toggleAudio}
           style={{
-            background: 'rgba(255, 255, 255, 0.04)',
+            background: 'var(--bg-input)',
             border: '1px solid var(--border-subtle)',
-            color: 'var(--text-muted)',
-            width: '36px',
-            height: '36px',
-            borderRadius: '8px',
+            color: 'var(--text-secondary)',
+            width: '38px',
+            height: '38px',
+            borderRadius: '10px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            transition: 'all 0.15s ease'
           }}
           title={muted ? "Unmute Sound FX" : "Mute Sound FX"}
         >
-          {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
+          {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
         </button>
 
         <button
           onClick={toggleTheme}
           style={{
-            background: 'rgba(255, 255, 255, 0.04)',
+            background: 'var(--bg-input)',
             border: '1px solid var(--border-subtle)',
             color: 'var(--accent-primary)',
-            width: '36px',
-            height: '36px',
-            borderRadius: '8px',
+            width: '38px',
+            height: '38px',
+            borderRadius: '10px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            transition: 'all 0.15s ease'
           }}
-          title="Toggle Dark / Light Theme"
+          title={theme === 'dark' ? "Switch to Light Theme" : "Switch to Dark Theme"}
         >
-          {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+          {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
         </button>
       </div>
     </nav>
