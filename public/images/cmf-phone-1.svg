@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cmf-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#9A3412"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Matte Orange Modular Back -->
+  <rect x="95" y="30" width="210" height="440" rx="28" fill="url(#cmf-body)" stroke="#F97316" stroke-width="2.5"/>
+  <rect x="99" y="34" width="202" height="432" rx="24" fill="#C2410C"/>
+  
+  <!-- Top Left Vertical Camera Capsule -->
+  <rect x="120" y="65" width="44" height="85" rx="22" fill="#18181B" stroke="#3F3F46" stroke-width="2"/>
+  <circle cx="142" cy="88" r="11" fill="#000" stroke="#F97316" stroke-width="2"/>
+  <circle cx="142" cy="125" r="9" fill="#000" stroke="#3F3F46" stroke-width="1.5"/>
+  
+  <!-- Bottom Right Stainless Steel Dial Wheel -->
+  <circle cx="270" cy="420" r="18" fill="#D4D4D8" stroke="#71717A" stroke-width="2"/>
+  <circle cx="270" cy="420" r="10" fill="#27272A"/>
+  
+  <text x="200" y="430" fill="#FFEDD5" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="2">CMF PHONE 1</text>
+</svg>

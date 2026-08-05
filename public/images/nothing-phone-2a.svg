@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nothing-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#27272A"/>
+      <stop offset="100%" stop-color="#09090B"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="95" y="30" width="210" height="440" rx="28" fill="url(#nothing-body)" stroke="#52525B" stroke-width="2.5"/>
+  <rect x="99" y="34" width="202" height="432" rx="24" fill="#0A0A0C"/>
+  
+  <!-- Transparent Back Circuit Board Lines -->
+  <path d="M 120 60 L 280 60 L 280 180 L 120 180 Z" fill="none" stroke="#27272A" stroke-width="2"/>
+  
+  <!-- Centered Dual Camera Capsule -->
+  <rect x="150" y="100" width="100" height="44" rx="22" fill="#18181B" stroke="#00F0FF" stroke-width="2"/>
+  <circle cx="178" cy="122" r="11" fill="#000" stroke="#00F0FF" stroke-width="2"/>
+  <circle cx="222" cy="122" r="11" fill="#000" stroke="#00F0FF" stroke-width="2"/>
+  
+  <!-- White LED Glyph Strips -->
+  <path d="M 135 85 A 40 40 0 0 1 265 85" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 135 160 A 40 40 0 0 0 265 160" fill="none" stroke="#FFF" stroke-width="4" stroke-linecap="round"/>
+  
+  <text x="200" y="430" fill="#E4E4E7" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="2">NOTHING PHONE (2a)</text>
+</svg>

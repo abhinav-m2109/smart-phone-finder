@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mi-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="95" y="30" width="210" height="440" rx="30" fill="url(#mi-body)" stroke="#475569" stroke-width="2.5"/>
+  <rect x="99" y="34" width="202" height="432" rx="26" fill="#0B132B"/>
+  
+  <!-- Massive Circular Leica Camera Bump -->
+  <circle cx="200" cy="160" r="65" fill="#020617" stroke="#E2E8F0" stroke-width="3"/>
+  <circle cx="200" cy="160" r="60" fill="#090D16" stroke="#94A3B8" stroke-width="1.5"/>
+  
+  <!-- 4 Leica Quad Lenses -->
+  <circle cx="175" cy="138" r="12" fill="#000" stroke="#00F0FF" stroke-width="2"/>
+  <circle cx="225" cy="138" r="12" fill="#000" stroke="#00F0FF" stroke-width="2"/>
+  <circle cx="175" cy="182" r="12" fill="#000" stroke="#00F0FF" stroke-width="2"/>
+  <circle cx="225" cy="182" r="12" fill="#000" stroke="#00F0FF" stroke-width="2"/>
+  <text x="200" y="164" fill="#EF4444" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">LEICA</text>
+  
+  <text x="200" y="430" fill="#CBD5E1" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="2">XIAOMI 14 ULTRA</text>
+</svg>

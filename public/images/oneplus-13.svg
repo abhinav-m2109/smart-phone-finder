@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="op-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="50%" stop-color="#022C22"/>
+      <stop offset="100%" stop-color="#05070A"/>
+    </linearGradient>
+  </defs>
+  
+  <rect x="95" y="30" width="210" height="440" rx="30" fill="url(#op-body)" stroke="#10B981" stroke-width="2.5"/>
+  <rect x="99" y="34" width="202" height="432" rx="26" fill="#021D17"/>
+  
+  <!-- Hasselblad Circular Camera Module -->
+  <circle cx="170" cy="130" r="48" fill="#064E3B" stroke="#34D399" stroke-width="2.5"/>
+  <circle cx="170" cy="130" r="44" fill="#000"/>
+  
+  <!-- 3 Hasselblad Lenses -->
+  <circle cx="150" cy="118" r="10" fill="#000" stroke="#10B981" stroke-width="2"/>
+  <circle cx="190" cy="118" r="10" fill="#000" stroke="#10B981" stroke-width="2"/>
+  <circle cx="170" cy="148" r="10" fill="#000" stroke="#10B981" stroke-width="2"/>
+  <text x="208" y="145" fill="#34D399" font-family="sans-serif" font-size="10" font-weight="bold">H</text>
+  
+  <text x="200" y="430" fill="#6EE7B7" font-family="sans-serif" font-size="14" font-weight="bold" text-anchor="middle" letter-spacing="2">ONEPLUS 13 5G</text>
+</svg>
