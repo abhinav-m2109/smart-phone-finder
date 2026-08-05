@@ -67,6 +67,6 @@ The ML server will be active at `http://localhost:8000`.
 
 ---
 
-## 📜 License
+## You can view the live deployment of this project here:
+https://smart-phone-finder-nine.vercel.app/
 
-MIT License © 2026 Abhinav M.
