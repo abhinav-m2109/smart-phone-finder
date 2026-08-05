@@ -1,4 +1,175 @@
 export const SMARTPHONES = [
+  // --- ONEPLUS NEXT-GEN & R SERIES ---
+  {
+    id: "oneplus-15",
+    name: "OnePlus 15 5G",
+    brand: "OnePlus",
+    launchPrice: 79999,
+    currentPrice: 79999,
+    lowestPrice: 74999,
+    highestPrice: 79999,
+    priceStatus: "stable",
+    priceChangeAmount: 0,
+    priceChangePercent: "0.0%",
+    hikeNotice: null,
+    dropNotice: null,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS68ohSIFyCDOFBv5SlUpfTncnr5HVLLywJZ65oZEhoCw&s=10",
+    rating: 5.0,
+    reviewsCount: 620,
+    category: "Ultra-Flagship",
+    tags: ["Snapdragon 8 Gen 5", "6500 mAh Battery", "120W SUPERVOOC", "Hasselblad 5.0"],
+    scores: { camera: 98, battery: 100, gaming: 100, value: 91, design: 98 },
+    specs: {
+      chipset: "Snapdragon 8 Gen 5 (2nm)",
+      ramStorage: "16GB RAM / 512GB Storage",
+      display: "6.82\" 2K 120Hz LTPO AMOLED, 5000 nits Peak",
+      camera: "50MP Sony LYT-900 OIS + 50MP 5x Periscope + 50MP Ultra-wide",
+      battery: "6500 mAh, 120W SUPERVOOC, 50W Wireless",
+      osUpdates: "5 Years OS Support",
+      weight: "215g",
+      antutuScore: "3,050,000"
+    },
+    stores: [
+      { name: "OnePlus Store India", price: 74999, isLowest: true, inStock: true, link: "https://www.oneplus.in", freeShipping: true },
+      { name: "Amazon India", price: 79999, isLowest: false, inStock: true, link: "https://www.amazon.in", freeShipping: true }
+    ],
+    priceHistory: [
+      { month: "Mar", price: 79999 },
+      { month: "Apr", price: 79999 },
+      { month: "May", price: 79999 },
+      { month: "Jun", price: 79999 },
+      { month: "Jul", price: 79999 },
+      { month: "Aug", price: 74999 }
+    ]
+  },
+  {
+    id: "oneplus-15r",
+    name: "OnePlus 15R 5G",
+    brand: "OnePlus",
+    launchPrice: 49999,
+    currentPrice: 49999,
+    lowestPrice: 46999,
+    highestPrice: 49999,
+    priceStatus: "stable",
+    priceChangeAmount: 0,
+    priceChangePercent: "0.0%",
+    hikeNotice: null,
+    dropNotice: null,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK8v43xg9AAtT5aQ87ayoyxOb3AOfOMUkoJFXQc0D90w&s=10",
+    rating: 4.8,
+    reviewsCount: 780,
+    category: "Flagship Killer",
+    tags: ["Snapdragon 8 Gen 4", "6000 mAh", "100W Charging", "Gaming Champ"],
+    scores: { camera: 91, battery: 99, gaming: 99, value: 96, design: 94 },
+    specs: {
+      chipset: "Snapdragon 8 Gen 4 (3nm)",
+      ramStorage: "12GB RAM / 256GB Storage",
+      display: "6.78\" 1.5K 120Hz AMOLED, 4500 nits",
+      camera: "50MP Sony Main OIS + 8MP Ultra-wide + 2MP Macro",
+      battery: "6000 mAh, 100W Fast Charge",
+      osUpdates: "4 Years OS Support",
+      weight: "205g",
+      antutuScore: "2,450,000"
+    },
+    stores: [
+      { name: "Amazon India", price: 46999, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "OnePlus Store India", price: 49999, isLowest: false, inStock: true, link: "https://www.oneplus.in", freeShipping: true }
+    ],
+    priceHistory: [
+      { month: "Mar", price: 49999 },
+      { month: "Apr", price: 49999 },
+      { month: "May", price: 49999 },
+      { month: "Jun", price: 49999 },
+      { month: "Jul", price: 49999 },
+      { month: "Aug", price: 46999 }
+    ]
+  },
+  {
+    id: "oneplus-13r",
+    name: "OnePlus 13R 5G",
+    brand: "OnePlus",
+    launchPrice: 42999,
+    currentPrice: 42999,
+    lowestPrice: 39999,
+    highestPrice: 42999,
+    priceStatus: "stable",
+    priceChangeAmount: 0,
+    priceChangePercent: "0.0%",
+    hikeNotice: null,
+    dropNotice: null,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeu4zIrofRio5YqteGZ3KB1IbQR8Tu4ljvnZxPFWjyjw&s",
+    rating: 4.8,
+    reviewsCount: 1890,
+    category: "Flagship Killer",
+    tags: ["Snapdragon 8 Gen 3", "5500 mAh", "ProXDR Display", "Value Beast"],
+    scores: { camera: 90, battery: 97, gaming: 97, value: 97, design: 93 },
+    specs: {
+      chipset: "Snapdragon 8 Gen 3 (4nm)",
+      ramStorage: "12GB RAM / 256GB Storage",
+      display: "6.78\" 1.5K 120Hz ProXDR AMOLED, 4500 nits",
+      camera: "50MP Sony LYT-700 OIS + 8MP Ultra-wide + 2MP Macro",
+      battery: "5500 mAh, 100W SUPERVOOC",
+      osUpdates: "4 Years OS Support",
+      weight: "207g",
+      antutuScore: "1,780,000"
+    },
+    stores: [
+      { name: "Amazon India", price: 39999, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "OnePlus Store India", price: 42999, isLowest: false, inStock: true, link: "https://www.oneplus.in", freeShipping: true }
+    ],
+    priceHistory: [
+      { month: "Mar", price: 42999 },
+      { month: "Apr", price: 42999 },
+      { month: "May", price: 42999 },
+      { month: "Jun", price: 42999 },
+      { month: "Jul", price: 42999 },
+      { month: "Aug", price: 39999 }
+    ]
+  },
+  {
+    id: "oneplus-12r",
+    name: "OnePlus 12R 5G",
+    brand: "OnePlus",
+    launchPrice: 39999,
+    currentPrice: 35999,
+    lowestPrice: 33999,
+    highestPrice: 39999,
+    priceStatus: "drop",
+    priceChangeAmount: -4000,
+    priceChangePercent: "-10.0%",
+    hikeNotice: null,
+    dropNotice: "₹4,000 Instant Discount in India!",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj6WybOVhsq_FwB_-VfAPNQx1xIXwrzBnYTGTiJJH8TQ&s=10",
+    rating: 4.8,
+    reviewsCount: 5400,
+    category: "Mid-Range",
+    tags: ["Snapdragon 8 Gen 2", "5500 mAh", "100W Charging", "LTPO 4.0"],
+    scores: { camera: 88, battery: 97, gaming: 95, value: 98, design: 92 },
+    specs: {
+      chipset: "Snapdragon 8 Gen 2 (4nm)",
+      ramStorage: "8GB RAM / 128GB Storage",
+      display: "6.78\" 1.5K 120Hz LTPO 4.0 AMOLED, 4500 nits",
+      camera: "50MP Sony IMX890 OIS + 8MP Ultra-wide + 2MP Macro",
+      battery: "5500 mAh, 100W SUPERVOOC",
+      osUpdates: "3 Years OS Support",
+      weight: "207g",
+      antutuScore: "1,520,000"
+    },
+    stores: [
+      { name: "Amazon India", price: 33999, isLowest: true, inStock: true, link: "https://www.amazon.in", freeShipping: true },
+      { name: "OnePlus Store India", price: 35999, isLowest: false, inStock: true, link: "https://www.oneplus.in", freeShipping: true },
+      { name: "Reliance Digital", price: 35999, isLowest: false, inStock: true, link: "https://www.reliancedigital.in", freeShipping: true }
+    ],
+    priceHistory: [
+      { month: "Mar", price: 39999 },
+      { month: "Apr", price: 38999 },
+      { month: "May", price: 37999 },
+      { month: "Jun", price: 36999 },
+      { month: "Jul", price: 35999 },
+      { month: "Aug", price: 33999 }
+    ]
+  },
+
   // --- APPLE IPHONE 17 SERIES (NEXT-GEN) ---
   {
     id: "iphone-17-pro-max",
