@@ -1,6 +1,6 @@
-# PhonePulse: Indian Smartphone Price Hike & Deal Intelligence Hub 🇮🇳📱
+# smart-phone-scouter: Indian Smartphone Price Hike & Deal Intelligence Hub 🇮🇳📱
 
-PhonePulse is a full-stack AI-powered smartphone price tracker, price hike alert engine, and Indian retailer deal comparator built with **React 18 + Vite** and a **Python FastAPI Machine Learning backend**.
+SmartPhone-Scouter is a full-stack AI-powered smartphone price tracker, price hike alert engine, and Indian retailer deal comparator built with **React 18 + Vite** and a **Python FastAPI Machine Learning backend**.
 
 ![Obsidian Dark UI](https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=1200)
 
@@ -68,5 +68,5 @@ The ML server will be active at `http://localhost:8000`.
 ---
 
 ## You can view the live deployment of this project here:
-https://smart-phone-finder-nine.vercel.app/
+[https://smart-phone-scouter-3djvstegk-the-peak1.vercel.app/]
 
