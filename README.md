@@ -1,4 +1,4 @@
-# smart-phone-scouter: Indian Smartphone Price Hike & Deal Intelligence Hub 🇮🇳📱
+# Smart-Phone-Scouter: Indian Smartphone Price Hike & Deal Intelligence Hub 🇮🇳📱
 
 SmartPhone-Scouter is a full-stack AI-powered smartphone price tracker, price hike alert engine, and Indian retailer deal comparator built with **React 18 + Vite** and a **Python FastAPI Machine Learning backend**.
 
