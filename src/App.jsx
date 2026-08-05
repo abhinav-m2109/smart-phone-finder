@@ -9,21 +9,21 @@ import StoreDealModal from './components/StoreDealModal';
 import PythonAiPredictorModal from './components/PythonAiPredictorModal';
 import CompareDrawer from './components/CompareDrawer';
 import { SMARTPHONES, PRIORITY_PREFERENCES } from './data/smartphones';
-import { Sparkles, ArrowUpDown, Smartphone, Gauge, Zap } from 'lucide-react';
+import { Sparkles, ArrowUpDown, Smartphone } from 'lucide-react';
 import { soundFX } from './utils/audioEffects';
 import './styles/app.css';
 
 export default function App() {
   const [theme, setTheme] = useState('dark');
   const [searchQuery, setSearchQuery] = useState('');
-  const [maxBudget, setMaxBudget] = useState(1000);
+  const [maxBudget, setMaxBudget] = useState(1200);
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedBrand, setSelectedBrand] = useState('All');
   const [selectedPriority, setSelectedPriority] = useState('all');
   const [isHikeOnlyFilter, setIsHikeOnlyFilter] = useState(false);
   const [sortBy, setSortBy] = useState('recommended');
 
-  // Modals & Drawers
+  // Modals
   const [priceHistoryPhone, setPriceHistoryPhone] = useState(null);
   const [storeDealsPhone, setStoreDealsPhone] = useState(null);
   const [pythonAiPhone, setPythonAiPhone] = useState(null);
@@ -134,7 +134,7 @@ export default function App() {
 
   return (
     <div>
-      {/* F1 Style Telemetry Header Ticker */}
+      {/* Top Live Ticker */}
       <RacingTelemetryTicker
         hikeCount={hikeCount}
         lowestCount={lowestCount}
@@ -145,7 +145,7 @@ export default function App() {
       />
 
       <div className="app-container">
-        {/* Top Navbar */}
+        {/* Navbar */}
         <Navbar
           theme={theme}
           toggleTheme={toggleTheme}
@@ -153,30 +153,24 @@ export default function App() {
           onOpenCompare={() => setIsCompareOpen(true)}
         />
 
-        {/* Hero Header */}
+        {/* Minimal Hero Header */}
         <section className="hero-section">
           <div className="hero-badge">
-            <Sparkles size={16} /> Python AI & High-Octane Telemetry Hub
+            <Sparkles size={14} /> Python AI & Price Hike Intelligence
           </div>
           <h1 className="hero-title">
-            Smart Prices. <span>Hike Alerts.</span> Cheapest Deals.
+            Smart Prices. <span>Hike Alerts.</span> Best Deals.
           </h1>
           <p className="hero-subtitle">
-            Powered by Python Machine Learning. Track price hikes, forecast 90-day price trends, set drop alerts, and snipe the best smartphone deals.
+            Track smartphone price changes, forecast 90-day market trends with Python ML, and find the lowest price links across top retailers.
           </p>
         </section>
 
-        {/* Speedometer & Filters Container */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.75rem', marginBottom: '2.5rem' }}>
-          {/* Lando Norris Speedometer Budget Gauge */}
+        {/* Speedometer & Filter Panel */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
           <SpeedometerBudget maxBudget={maxBudget} setMaxBudget={setMaxBudget} />
-
-          {/* Standard Filters */}
+          
           <BudgetFilter
-            maxBudget={maxBudget}
-            setMaxBudget={setMaxBudget}
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
             selectedBrand={selectedBrand}
             setSelectedBrand={setSelectedBrand}
             selectedPriority={selectedPriority}
@@ -189,28 +183,28 @@ export default function App() {
           />
         </div>
 
-        {/* Header bar for phone listings */}
+        {/* Section Header */}
         <div className="phones-section-header">
           <div className="section-title">
-            <Smartphone size={24} style={{ color: '#FF8700' }} />
-            <span>Telemetry Smartphone Grid</span>
-            <span className="count-badge">{filteredPhones.length} Found</span>
+            <Smartphone size={20} style={{ color: 'var(--accent-primary)' }} />
+            <span>Smartphone Catalog</span>
+            <span className="count-badge">{filteredPhones.length} Devices</span>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <ArrowUpDown size={16} style={{ color: 'var(--text-dim)' }} />
+            <ArrowUpDown size={15} style={{ color: 'var(--text-dim)' }} />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               style={{
-                padding: '0.5rem 0.85rem',
-                borderRadius: '10px',
+                padding: '0.45rem 0.75rem',
+                borderRadius: '8px',
                 background: 'var(--bg-card)',
                 border: '1px solid var(--border-subtle)',
                 color: 'var(--text-main)',
                 fontFamily: 'inherit',
-                fontSize: '0.85rem',
-                fontWeight: 700,
+                fontSize: '0.82rem',
+                fontWeight: 600,
                 outline: 'none',
                 cursor: 'pointer'
               }}
@@ -240,9 +234,9 @@ export default function App() {
             ))}
           </div>
         ) : (
-          <div className="glass-panel" style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', marginBottom: '0.5rem' }}>
-              No smartphones match your telemetry criteria
+          <div className="glass-panel" style={{ padding: '3.5rem 2rem', textAlign: 'center' }}>
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.25rem', marginBottom: '0.5rem' }}>
+              No smartphones match your current filters
             </h3>
             <button
               className="btn-primary"
@@ -254,24 +248,38 @@ export default function App() {
                 setSearchQuery('');
               }}
             >
-              Reset Pit Stop Filters
+              Reset Filters
             </button>
           </div>
         )}
 
-        {/* Floating Sticky Compare Bar */}
+        {/* Sticky Compare Bar */}
         {compareList.length > 0 && !isCompareOpen && (
-          <div className="compare-sticky-bar">
-            <span style={{ fontSize: '0.9rem', fontWeight: 800 }}>
-              🏎️ {compareList.length} Devices selected for comparison
+          <div style={{
+            position: 'fixed',
+            bottom: '1.5rem',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            background: '#0D121A',
+            border: '1px solid var(--accent-primary)',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '9999px',
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.6)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '1rem',
+            zIndex: 100
+          }}>
+            <span style={{ fontSize: '0.85rem', fontWeight: 700 }}>
+              {compareList.length} Device{compareList.length > 1 ? 's' : ''} selected for comparison
             </span>
             <button className="btn-primary" onClick={() => setIsCompareOpen(true)}>
-              Compare Now
+              Compare Devices
             </button>
           </div>
         )}
 
-        {/* Price History Modal */}
+        {/* Modals */}
         {priceHistoryPhone && (
           <PriceHistoryModal
             phone={priceHistoryPhone}
@@ -279,7 +287,6 @@ export default function App() {
           />
         )}
 
-        {/* Store Deals Modal */}
         {storeDealsPhone && (
           <StoreDealModal
             phone={storeDealsPhone}
@@ -287,7 +294,6 @@ export default function App() {
           />
         )}
 
-        {/* Python AI Forecast Modal */}
         {pythonAiPhone && (
           <PythonAiPredictorModal
             phone={pythonAiPhone}
@@ -295,7 +301,6 @@ export default function App() {
           />
         )}
 
-        {/* Comparison Drawer Modal */}
         {isCompareOpen && (
           <CompareDrawer
             compareList={compareList}
