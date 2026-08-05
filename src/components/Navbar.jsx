@@ -1,79 +1,44 @@
-import React from 'react';
-import { Smartphone, Sun, Moon, Volume2, VolumeX } from 'lucide-react';
+import React, { useState } from 'react';
+import { Smartphone, Sun, Moon, Scale, Volume2, VolumeX, TrendingUp } from 'lucide-react';
 import { soundFX } from '../utils/audioEffects';
 
 export default function Navbar({ theme, toggleTheme, compareList, onOpenCompare }) {
-  const [muted, setMuted] = React.useState(soundFX.muted);
+  const [soundOn, setSoundOn] = useState(true);
 
-  const toggleAudio = () => {
-    const isMuted = soundFX.toggleMute();
-    setMuted(isMuted);
+  const toggleSound = () => {
+    soundFX.enabled = !soundOn;
+    setSoundOn(!soundOn);
+    if (!soundOn) soundFX.playClick();
   };
 
   return (
-    <nav className="navbar">
-      {/* Brand Header on Far Left */}
-      <div className="nav-brand">
-        <div className="nav-logo-icon">
-          <Smartphone size={22} />
+    <header className="navbar">
+      <a href="#" className="brand-logo">
+        <div className="brand-icon">
+          <Smartphone size={20} />
         </div>
-        <div className="nav-title">
-          SmartPhone-<span>Scouter</span>
+        <div>
+          <div className="brand-title">PhonePulse</div>
+          <div className="brand-subtitle">Python AI & Price Tracker</div>
         </div>
-      </div>
+      </a>
 
-      {/* Far Right Controls (Compare Badge, Sound Mute, Theme Switcher) */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+      <div className="nav-actions">
         {compareList.length > 0 && (
-          <button 
-            className="btn-primary" 
-            onClick={onOpenCompare} 
-            style={{ fontSize: '0.8rem', padding: '0.45rem 0.85rem' }}
-          >
-            Compare ({compareList.length})
+          <button className="btn-secondary" onClick={onOpenCompare}>
+            <Scale size={16} />
+            <span>Compare ({compareList.length})</span>
           </button>
         )}
 
-        <button
-          onClick={toggleAudio}
-          style={{
-            background: 'var(--bg-input)',
-            border: '1px solid var(--border-subtle)',
-            color: 'var(--text-secondary)',
-            width: '38px',
-            height: '38px',
-            borderRadius: '10px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            transition: 'all 0.15s ease'
-          }}
-          title={muted ? "Unmute Sound FX" : "Mute Sound FX"}
-        >
-          {muted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+        <button className="btn-icon" onClick={toggleSound} title="Toggle Audio Feedback">
+          {soundOn ? <Volume2 size={18} style={{ color: 'var(--accent-primary)' }} /> : <VolumeX size={18} style={{ color: 'var(--text-dim)' }} />}
         </button>
 
-        <button
-          onClick={toggleTheme}
-          style={{
-            background: 'var(--bg-input)',
-            border: '1px solid var(--border-subtle)',
-            color: 'var(--accent-primary)',
-            width: '38px',
-            height: '38px',
-            borderRadius: '10px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            transition: 'all 0.15s ease'
-          }}
-          title={theme === 'dark' ? "Switch to Light Theme" : "Switch to Dark Theme"}
-        >
+        <button className="btn-icon" onClick={toggleTheme} title="Toggle Theme">
           {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
         </button>
       </div>
-    </nav>
+    </header>
   );
 }
